@@ -1,0 +1,26 @@
+{
+  "name": "APP_SCOPE-software",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "build:shared": "npm run build -w @APP_SCOPE/shared",
+    "postinstall": "npm run build:shared",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm run start:dev -w @APP_SCOPE/backend",
+    "dev:frontend": "npm run start -w @APP_SCOPE/frontend",
+    "dev:web": "npm run web -w @APP_SCOPE/frontend",
+    "test:backend": "npm run test -w @APP_SCOPE/backend",
+    "test:shared": "npm run test -w @APP_SCOPE/shared"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.1",
+    "typescript": "^5.7.3"
+  }
+}

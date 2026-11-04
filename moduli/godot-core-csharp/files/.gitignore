@@ -1,0 +1,39 @@
+# Godot 4+
+.godot/
+!.godot/extension_list.cfg
+
+# Archivi Godot
+*.pck
+*.apk
+*.aab
+
+# C# / .NET
+.mono/
+data_*/
+mono_crash.*.json
+*/.mono/
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# Sistema operativo
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# Export Android e output locali
+**/android/build/
+Builds/
+
+# Chiavi di firma: mai nel repo
+*.jks
+*.keystore
+!debug.keystore
+
+# File locali
+.mcp.json
+*.old

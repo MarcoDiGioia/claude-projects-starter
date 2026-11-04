@@ -1,0 +1,9 @@
+{
+  "extends": "../node_modules/expo/tsconfig.base.json",
+  "compilerOptions": {
+    "strict": true,
+    "typeRoots": ["../node_modules/@types"],
+    "paths": { "@/*": ["./*"] }
+  },
+  "include": ["**/*.ts", "**/*.tsx"]
+}
