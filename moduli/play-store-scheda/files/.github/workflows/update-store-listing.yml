@@ -1,0 +1,38 @@
+name: Update Store Listing
+
+# Solo manuale: aggiorna su Google Play testi (store/listings/) e immagini
+# (store/screenshots/, store/grafiche/). Dettagli in .github/scripts/update_store_listing.py.
+on:
+  workflow_dispatch:
+    inputs:
+      cosa:
+        description: Cosa caricare
+        type: choice
+        options:
+          - testi e immagini
+          - solo immagini
+          - solo testi
+        default: testi e immagini
+
+jobs:
+  listing:
+    name: Update Play Store listing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install --quiet google-auth requests pillow
+
+      - name: Update listing
+        env:
+          GOOGLE_PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_PLAY_SERVICE_ACCOUNT_JSON }}
+          COSA: ${{ inputs.cosa }}
+        run: |
+          case "$COSA" in
+            "solo immagini") opzione=--solo-immagini ;;
+            "solo testi") opzione=--solo-testi ;;
+            *) opzione= ;;
+          esac
+          python .github/scripts/update_store_listing.py com.progettogazza.APP_PACKAGE $opzione
