@@ -10,7 +10,7 @@ conflitti: [android-rn]
 azioni_esterne: true   # carica una build su Google Play
 ---
 
-Astratto da `release-play-store.yml` e da `Documentazione/8_Rilascio_Play_Store.md` di `Streethole`. **Differenza voluta**: l'originale parte anche a ogni push su `main`; qui c'è solo `workflow_dispatch` (regola: workflow CI solo manuali).
+**Scelta**: trigger solo `workflow_dispatch` (regola: workflow CI solo manuali), niente caricamento a ogni push.
 
 ## File
 | Da (nel modulo) | A (nel nuovo progetto) |
@@ -27,7 +27,7 @@ Astratto da `release-play-store.yml` e da `Documentazione/8_Rilascio_Play_Store.
 - Se manca `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON`, l'AAB resta negli artifact.
 - Da verificare alla prima build: `target_sdk` del preset e requisiti correnti di Google Play.
 
-## Secret richiesti (li imposta solo Marco)
+## Secret richiesti (li imposta solo l'utente)
 | Secret | Contenuto |
 |---|---|
 | `ANDROID_UPLOAD_KEYSTORE_BASE64` | keystore di upload in base64 |
@@ -35,9 +35,9 @@ Astratto da `release-play-store.yml` e da `Documentazione/8_Rilascio_Play_Store.
 | `ANDROID_UPLOAD_KEYSTORE_PASSWORD` | password (keystore e chiave) |
 | `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON` | facoltativo: JSON dell'account di servizio |
 
-Nota: i nomi sono diversi da quelli delle app React Native Gazza (`KEYSTORE_BASE64`...), perché vengono dal gioco Godot. Chiave e secret non passano mai dalla chat né dai file.
+Nota: i nomi sono diversi da quelli dei moduli React Native (`KEYSTORE_BASE64`...): non vanno mescolati nello stesso repository. Chiave e secret non passano mai dalla chat né dai file.
 
-## Passi manuali (li fa Marco)
+## Passi manuali (a carico dell'utente)
 1. Generare la chiave di upload sul proprio computer: `keytool -genkeypair -v -keystore upload.keystore -alias upload -keyalg RSA -keysize 2048 -validity 10000`; conservarla in un gestore di password con una copia di sicurezza.
 2. Impostare i secret nel repo (Settings → Secrets and variables → Actions, o `gh secret set` con i valori da stdin).
 3. In Play Console: creare l'app (package `APP_PACKAGE_ID`, che non si cambia più), attivare Play App Signing, caricare **a mano** il primo AAB scaricato dagli artifact, creare la lista tester del test interno. Compilare le schede obbligatorie: privacy policy, sicurezza dei dati, classificazione dei contenuti, pubblico, annunci.

@@ -10,7 +10,7 @@ conflitti: []
 azioni_esterne: false
 ---
 
-Astratto dal `CLAUDE.md` di `Streethole`, senza i percorsi della macchina di Marco né il server MCP locale (`.mcp.json` resta fuori dal repo, vedi `godot-core-csharp/.gitignore`).
+Senza percorsi locali né server MCP personali (`.mcp.json` resta fuori dal repository, vedi `godot-core-csharp/.gitignore`).
 
 ## File
 | Da (nel modulo) | A (nel nuovo progetto) |
@@ -21,7 +21,7 @@ Astratto dal `CLAUDE.md` di `Streethole`, senza i percorsi della macchina di Mar
 `APP_PROJECT`.
 
 ## Passi manuali
-Aggiungere nel `CLAUDE.md` del progetto il percorso dell'eseguibile Godot sulle macchine di Marco.
+Aggiungere nel `CLAUDE.md` del progetto il percorso dell'eseguibile Godot sulle tue macchine.
 
 ## Verifica
 Il `CLAUDE.md` contiene sia le regole base sia le regole Godot.

@@ -16,7 +16,7 @@ azioni_esterne: false
 | `files/CLAUDE.base.md` | `CLAUDE.md` (se esiste già, unire le regole in cima) |
 
 ## Note
-Le regole vengono da `progetto-gazza/CLAUDE.md` e dalle regole fisse di Marco. Le sezioni "Workflow Orchestration" e "Task Management" di quel file (piano, subagenti, lessons) sono preferenze di lavoro personali: non sono incluse, da aggiungere se Marco le vuole nel nuovo progetto.
+Sono regole predefinite ragionevoli, da adattare al proprio modo di lavorare. Le preferenze di processo più personali (uso della modalità piano, subagenti, file di lezioni apprese, task list) non sono incluse: aggiungerle se servono.
 
 ## Passi manuali
 Nessuno.

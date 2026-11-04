@@ -10,7 +10,7 @@ conflitti: []
 azioni_esterne: false
 ---
 
-Tratto da `Associati/shared`, senza gli schemi di dominio.
+Senza schemi di dominio.
 
 ## File
 | Da (nel modulo) | A (nel nuovo progetto) |

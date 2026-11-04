@@ -35,4 +35,4 @@ jobs:
             "solo testi") opzione=--solo-testi ;;
             *) opzione= ;;
           esac
-          python .github/scripts/update_store_listing.py com.progettogazza.APP_PACKAGE $opzione
+          python .github/scripts/update_store_listing.py APP_PACKAGE_ID $opzione

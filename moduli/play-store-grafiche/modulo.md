@@ -21,9 +21,9 @@ azioni_esterne: false
 Le immagini sostituiscono quelle già su Play dello stesso tipo e lingua.
 
 ## Note
-Questo modulo non ha file: nel template di progetto-gazza non esistono grafiche, solo la regola sopra. Misure e prompt di generazione da aggiungere al modulo quando si farà la prima app con grafiche.
+Questo modulo non ha file: contiene solo la regola sopra. Misure e prompt di generazione da aggiungere al modulo quando si farà la prima app con grafiche.
 
-## Passi manuali (li fa Marco)
+## Passi manuali (a carico dell'utente)
 Creare o approvare le immagini e metterle nelle cartelle.
 
 ## Verifica

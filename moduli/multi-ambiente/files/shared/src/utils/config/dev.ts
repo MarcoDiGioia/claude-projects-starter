@@ -14,7 +14,7 @@ const devConfig: AppConfig = {
   app: {
     name: 'APP_DISPLAY_NAME',
     version: '1.0.0',
-    author: 'Marco Di Gioia',
+    author: 'APP_AUTHOR',
     debugMode: true,
   },
 };

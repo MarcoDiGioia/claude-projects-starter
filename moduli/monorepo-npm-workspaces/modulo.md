@@ -10,7 +10,7 @@ conflitti: [android-rn]
 azioni_esterne: false
 ---
 
-Tratto dal monorepo `MarcoDiGioia/Associati` (cartella `Software/`), senza il codice di dominio.
+Senza codice di dominio.
 
 ## File
 | Da (nel modulo) | A (nel nuovo progetto) |
@@ -20,7 +20,7 @@ Tratto dal monorepo `MarcoDiGioia/Associati` (cartella `Software/`), senza il co
 | `files/CLAUDE.md` | `CLAUDE.md` (unire con quello di `regole-base`) |
 
 ## Segnaposto
-`APP_SCOPE`: scope npm in minuscolo (es. `associati` → `@associati/shared`).
+`APP_SCOPE`: scope npm in minuscolo (es. `miaapp` → `@miaapp/shared`).
 
 ## Note
 - `postinstall` costruisce `shared`, quindi `npm ci` lascia subito il monorepo utilizzabile.
@@ -28,7 +28,7 @@ Tratto dal monorepo `MarcoDiGioia/Associati` (cartella `Software/`), senza il co
 - Il `conflitti: [android-rn]` indica che i due moduli hanno struttura diversa (`mobile/` + `shared/` contro workspaces). Un'app React Native pura nel monorepo non è ancora coperta da un modulo.
 - Nel monorepo di origine esistono anche `setup-node.sh` e script PowerShell per un Node locale in `.tools/`: sono una comodità personale, non inclusi.
 
-## Passi manuali (li fa Marco)
+## Passi manuali (a carico dell'utente)
 Creare il repo GitHub del progetto.
 
 ## Verifica

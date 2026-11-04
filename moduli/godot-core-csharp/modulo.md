@@ -10,7 +10,7 @@ conflitti: [android-rn]
 azioni_esterne: false
 ---
 
-Astratto dal gioco `Streethole` (nome del progetto Godot: Pothole Patrol), senza codice di dominio.
+Solo infrastruttura, senza codice di dominio.
 
 ## File
 | Da (nel modulo) | A (nel nuovo progetto) |
@@ -25,7 +25,7 @@ Astratto dal gioco `Streethole` (nome del progetto Godot: Pothole Patrol), senza
 | `files/.gitignore` | `.gitignore` |
 
 ## Segnaposto
-`APP_PROJECT`: nome del progetto in PascalCase, senza spazi (es. `PotholePatrol`); è anche namespace C# e `project/assembly_name` in `project.godot`.
+`APP_PROJECT`: nome del progetto in PascalCase, senza spazi (es. `MiaApp`); è anche namespace C# e `project/assembly_name` in `project.godot`.
 
 ## Struttura attesa
 Il progetto Godot sta in `Godot/`, non nella radice del repo. Cartelle di `Scripts/`: `Core/` (servizi, bus, autoload), `Domain/` (logica pura e modelli, senza nodi), `Gameplay/` (nodi di gioco), `Presentation/` (viste e controller), `Tests/`.

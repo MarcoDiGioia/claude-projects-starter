@@ -5,8 +5,8 @@ namespace APP_PROJECT.Core.Events
 {
     /// <summary>
     /// EventBus centrale: Disaccoppia la comunicazione tra i vari componenti.
-    /// Invece di avere riferimenti diretti (es. Pothole chiama ContractManagerController),
-    /// Pothole pubblica un evento e ContractManagerController lo ascolta.
+    /// Invece di avere riferimenti diretti (es. il nemico chiama il controller),
+    /// il nemico pubblica un evento e il controller lo ascolta.
     /// </summary>
     public static class EventBus
     {

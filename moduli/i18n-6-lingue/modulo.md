@@ -2,7 +2,7 @@
 id: i18n-6-lingue
 versione: 1
 descrizione: Traduzioni it/en/es/fr/de/pt con t('chiave'), lista('chiave') e test di completezza.
-quando_usarlo: App in più lingue (default per le app Gazza).
+quando_usarlo: App in più lingue (default per le app React Native del cestino).
 quando_no: App volutamente in una sola lingua.
 etichette: [multilingua]
 richiede: [android-rn]

@@ -2,7 +2,7 @@
 id: multi-ambiente
 versione: 1
 descrizione: Configurazione dev/test/prod iniettata da Babel (ENV) con constants.ts e ENVIRONMENTS.md.
-quando_usarlo: Ogni app React Native Gazza (obbligatorio nello standard).
+quando_usarlo: Ogni app React Native che segue la struttura del cestino (obbligatorio nello standard).
 quando_no: Progetti non React Native.
 etichette: [android]
 richiede: [android-rn]
