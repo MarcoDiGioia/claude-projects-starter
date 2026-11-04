@@ -1,0 +1,61 @@
+name: Build desktop (Windows + Linux)
+
+# Build di release per PC, come zip da scaricare dalla pagina dell'esecuzione
+# (Artifacts): pacchetti da cui partire per Steam, GOG e itch.io. Solo manuale.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  GODOT_VERSION: "4.7.2"
+  PROJECT_PATH: "Godot"
+
+jobs:
+  desktop:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - preset: Linux
+            dir: Linux
+            file: APP_PROJECT.x86_64
+          - preset: Windows
+            dir: Windows
+            file: APP_PROJECT.exe
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            8.0.x
+            9.0.x
+
+      - name: Setup Godot ${{ env.GODOT_VERSION }} Mono
+        uses: chickensoft-games/setup-godot@v2
+        with:
+          version: ${{ env.GODOT_VERSION }}
+          use-dotnet: true
+          include-templates: true
+
+      - name: Export ${{ matrix.preset }}
+        working-directory: ${{ env.PROJECT_PATH }}
+        run: |
+          mkdir -p Builds/${{ matrix.dir }}
+          dotnet build APP_PROJECT.sln
+          godot --headless --import || true
+          godot --headless --export-release "${{ matrix.preset }}" Builds/${{ matrix.dir }}/${{ matrix.file }}
+          test -f Builds/${{ matrix.dir }}/${{ matrix.file }}
+          ls -la Builds/${{ matrix.dir }}
+
+      - name: Carica il pacchetto
+        uses: actions/upload-artifact@v4
+        with:
+          name: APP_PROJECT-${{ matrix.dir }}-${{ github.run_number }}
+          path: ${{ env.PROJECT_PATH }}/Builds/${{ matrix.dir }}
+          retention-days: 14

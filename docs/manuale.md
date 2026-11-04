@@ -2,7 +2,7 @@
 
 Questo repository è il **cestino di moduli** per i tuoi nuovi progetti: dici a Claude cosa vuoi fare, Claude sceglie i moduli giusti, ti mostra il piano e, dopo il tuo ok, li applica. L'idea completa è in [`proposta-moduli.md`](proposta-moduli.md); qui c'è come si usa nella pratica.
 
-> Stato: i moduli presi da `progetto-gazza` sono in `moduli/` (vedi la PR dedicata). I moduli `monorepo-*` (da `Associati`) sono già presenti in bozza; quelli per Godot non esistono ancora.
+> Stato: i moduli presi da `progetto-gazza` sono in `moduli/` (vedi la PR dedicata). I moduli `monorepo-*` (da `Associati`) sono già presenti in bozza; anche i moduli `godot-*` (da `Streethole`).
 
 ## 1. Cosa c'è nel repository
 
@@ -71,5 +71,5 @@ Regole per i moduli: nessun segreto nei file (dove serve, il modulo dice cosa im
 ## 7. Cosa non c'è (ancora)
 
 - **Skill**: non ne servono per usare il repo. Se in futuro ne vorrai una sottile, si crea dalle impostazioni di claude.ai (Claude non può crearla da qui); tutta la logica resta nel repo.
-- **Moduli Godot**: da scrivere. I moduli monorepo sono una prima bozza dal progetto Associati.
+- **Moduli monorepo e Godot**: prime bozze astratte dai progetti Associati e Streethole, mai provate su un progetto nuovo (vedi fase 2 della proposta). Non c'è ancora un modulo per iOS Godot.
 - **Grafiche store e privacy policy**: i moduli `play-store-grafiche` e `privacy-policy` hanno solo la scheda, senza file da copiare.

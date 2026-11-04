@@ -24,4 +24,15 @@
 | [monorepo-backend-nestjs](monorepo-backend-nestjs/modulo.md) | Backend NestJS + Prisma + Jest | Monorepo con API | no | monorepo-npm-workspaces, monorepo-shared-zod |
 | [monorepo-frontend-expo](monorepo-frontend-expo/modulo.md) | Frontend Expo web-first con Metro per monorepo | Monorepo con app Expo | no | monorepo-npm-workspaces, monorepo-shared-zod |
 
-Candidati per dopo: `godot-*` (progetti Godot), `sito-statico`, `app-web-pwa`, `notifiche-locali`, `backup-export`, `acquisti-in-app`.
+### Godot 4 in C# (da `Streethole` / Pothole Patrol)
+
+| Id | Cosa fa | Quando usarlo | Esterno? | Richiede |
+|---|---|---|---|---|
+| [godot-regole-csharp](godot-regole-csharp/modulo.md) | Regole di codice, architettura e test per Godot C# | Ogni progetto Godot C# | no | regole-base |
+| [godot-core-csharp](godot-core-csharp/modulo.md) | ServiceLocator, EventBus, test runner, BuildInfo, SaveService, csproj, `.gitignore` | Ogni progetto Godot C# | no | regole-base, godot-regole-csharp |
+| [godot-progetto-base](godot-progetto-base/modulo.md) | `project.godot` di partenza (mobile-friendly) | Nuovo progetto Godot | no | godot-core-csharp |
+| [godot-ci-android-apk-prova](godot-ci-android-apk-prova/modulo.md) | Workflow manuale per l'APK di debug | Provare il gioco su telefono | no | godot-progetto-base |
+| [godot-ci-android-aab-play](godot-ci-android-aab-play/modulo.md) | Workflow manuale AAB firmato, upload sul test interno di Play, guida a chiave e secret | Gioco su Google Play | sì: carica su Play | godot-progetto-base |
+| [godot-ci-desktop](godot-ci-desktop/modulo.md) | Workflow manuale per Windows e Linux | Gioco anche per PC | no | godot-progetto-base |
+
+Candidati per dopo: `godot-ci-ios-non-firmato`, `sito-statico`, `app-web-pwa`, `notifiche-locali`, `backup-export`, `acquisti-in-app`.
