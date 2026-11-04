@@ -17,7 +17,7 @@ azioni_esterne: true   # carica una build su Google Play
 | `files/store/whatsnew/whatsnew-<lingua>` (7 file: it-IT, en-US, en-GB, es-ES, fr-FR, de-DE, pt-PT) | `store/whatsnew/` |
 
 ## Segnaposto
-`APP_PACKAGE` (nel workflow).
+`APP_PACKAGE_ID` (nel workflow).
 
 ## Note
 - Trigger solo `workflow_dispatch` (per risparmiare minuti di Actions). ENV=prod, track=internal: l'internal è la pre-release della build di produzione.
@@ -26,7 +26,7 @@ azioni_esterne: true   # carica una build su Google Play
 - Il workflow salva anche l'artifact `aab` (1 giorno): se l'upload via API fallisce, si scarica e si carica a mano.
 - Nessun segreto nei file: il workflow legge i secret del repo (vedi `firma-android`).
 
-## Passi manuali (li fa Marco)
+## Passi manuali (a carico dell'utente)
 - Lanciare il workflow da GitHub → Actions.
 - Su Play Console il link per i tester compare solo dopo la prima pubblicazione.
 

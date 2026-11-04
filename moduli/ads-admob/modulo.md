@@ -26,7 +26,7 @@ azioni_esterne: false
 - Impostazioni: mostrare "Preferenze privacy annunci" se `adsService.isPrivacyOptionsRequired()` (apre `showPrivacyOptions()`).
 - Interstitial: chiamare `registraAzione()` a ogni azione significativa dell'utente.
 
-## Passi manuali (li fa Marco)
+## Passi manuali (a carico dell'utente)
 - Creare l'app in AdMob e inserire l'App ID in `mobile/app.json` e in `AndroidManifest.xml`.
 - Inserire gli ID delle unità in `shared/src/utils/config/prod.ts`.
 - Creare il messaggio GDPR in AdMob → Privacy e messaggi (senza, il form di consenso non compare).

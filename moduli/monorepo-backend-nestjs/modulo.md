@@ -10,7 +10,7 @@ conflitti: []
 azioni_esterne: false
 ---
 
-Tratto da `Associati/backend`. Le parti specifiche di quel progetto (Supabase, Stripe, Sentry, notifiche push, PDF, email) non sono incluse: si aggiungono caso per caso.
+Le integrazioni specifiche (autenticazione gestita, pagamenti, monitoraggio, notifiche push, PDF, email) non sono incluse: si aggiungono caso per caso.
 
 ## File
 | Da (nel modulo) | A (nel nuovo progetto) |
@@ -30,7 +30,7 @@ Tratto da `Associati/backend`. Le parti specifiche di quel progetto (Supabase, S
 - Jest mappa `@APP_SCOPE/shared` ai sorgenti di `shared/src`, così i test non richiedono il build.
 - Nei sorgenti originali `GET /health-check` e Swagger (`/api/docs` con `SWAGGER_ENABLED=true`) sono le prime due rotte.
 
-## Passi manuali (li fa Marco)
+## Passi manuali (a carico dell'utente)
 Creare il database e mettere `DATABASE_URL` / `DIRECT_URL` reali nel `.env` locale e nei secret dell'hosting.
 
 ## Verifica

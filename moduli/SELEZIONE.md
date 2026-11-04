@@ -10,7 +10,7 @@
 | `play` | "sul Play Store", "pubblicare" | `ci-play-internal`, `play-console-checklist`, `firma-android` |
 | `scheda-store` | "scheda store", "testi dello store" | `play-store-scheda`, `play-store-grafiche` |
 | `dati-utente` | raccoglie o salva dati dell'utente, usa ads | `privacy-policy` |
-| `produzione` | "pubblica in produzione" detto esplicitamente da Marco | `ci-play-production` |
+| `produzione` | "pubblica in produzione" detto esplicitamente dall'utente | `ci-play-production` |
 | `monorepo` | "monorepo", "backend e app insieme", "pacchetto condiviso" | `monorepo-npm-workspaces`, `monorepo-shared-zod` |
 | `backend` | "API", "server", "NestJS" (in un monorepo) | `monorepo-backend-nestjs` |
 | `frontend` | "app web", "Expo" (in un monorepo) | `monorepo-frontend-expo` |

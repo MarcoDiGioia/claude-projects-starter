@@ -10,7 +10,7 @@ conflitti: []
 azioni_esterne: false
 ---
 
-Astratto da `build-desktop.yml` di `Streethole`. **Differenza voluta**: l'originale parte a ogni push su `develop` e `main`; qui solo `workflow_dispatch`.
+**Scelta**: trigger solo `workflow_dispatch`, niente build a ogni push.
 
 ## File
 | Da (nel modulo) | A (nel nuovo progetto) |
@@ -22,10 +22,10 @@ Astratto da `build-desktop.yml` di `Streethole`. **Differenza voluta**: l'origin
 
 ## Note
 - Richiede in `export_presets.cfg` i preset chiamati `Linux` e `Windows` (creati dall'editor).
-- L'upload sulle piattaforme (Steam, GOG, itch.io) non è incluso: si aggiunge a parte, con le loro chiavi, che le imposta Marco.
-- Nell'originale esiste anche `build-ios.yml` (IPA non firmato per AltStore/SideStore, runner macOS, solo manuale): non incluso, da aggiungere come modulo `godot-ci-ios-non-firmato` se serve.
+- L'upload sulle piattaforme (Steam, GOG, itch.io) non è incluso: si aggiunge a parte, con le loro chiavi, che imposta l'utente.
+- Non incluso: la build iOS non firmata (IPA per AltStore/SideStore, runner macOS), da aggiungere come modulo `godot-ci-ios-non-firmato` se serve.
 
-## Passi manuali (li fa Marco)
+## Passi manuali (a carico dell'utente)
 Lanciare il workflow da GitHub → Actions.
 
 ## Verifica

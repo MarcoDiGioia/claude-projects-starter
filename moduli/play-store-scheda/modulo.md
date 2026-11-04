@@ -18,7 +18,7 @@ azioni_esterne: true   # scrive la scheda su Google Play
 | `files/.github/scripts/update_store_listing.py` | `.github/scripts/update_store_listing.py` |
 
 ## Segnaposto
-`APP_DISPLAY_NAME` (titolo), `APP_PACKAGE` (workflow).
+`APP_DISPLAY_NAME` (titolo), `APP_PACKAGE_ID` (workflow).
 
 ## Note
 - Limiti: titolo 30, descrizione breve 80, descrizione completa 4000 caratteri.
@@ -28,7 +28,7 @@ azioni_esterne: true   # scrive la scheda su Google Play
 - Prova locale senza toccare Play: `python .github/scripts/update_store_listing.py <package> --dry-run`.
 - L'account di servizio deve avere il permesso "Gestisci la presenza nello store".
 
-## Passi manuali (li fa Marco)
+## Passi manuali (a carico dell'utente)
 Lanciare il workflow da GitHub → Actions.
 
 ## Verifica

@@ -7,7 +7,7 @@ quando_no: App non su Play.
 etichette: [play]
 richiede: []
 conflitti: []
-azioni_esterne: true   # secret del repo, impostati solo da Marco
+azioni_esterne: true   # secret del repo, impostati solo dall'utente
 ---
 
 ## Secret richiesti nel repo dell'app (GitHub → Settings → Secrets and variables → Actions)
@@ -18,10 +18,10 @@ azioni_esterne: true   # secret del repo, impostati solo da Marco
 - `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON`
 
 ## Regole
-- Questi valori li imposta solo Marco: Claude non li vede, non li chiede in chat e non li scrive in nessun file.
+- Questi valori li imposta solo l'utente: Claude non li vede, non li chiede in chat e non li scrive in nessun file.
 - `.gitignore` (modulo `android-rn`) esclude `*.keystore`, `*.jks` e `mobile/android/keystore.properties`.
 
-## Passi manuali (li fa Marco)
+## Passi manuali (a carico dell'utente)
 Impostare i cinque secret nel repo della nuova app.
 
 ## Verifica
