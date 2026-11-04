@@ -15,4 +15,13 @@
 | [play-console-checklist](play-console-checklist/modulo.md) | Passi a mano in Play Console | App su Play | no (solo istruzioni) | - |
 | [firma-android](firma-android/modulo.md) | Secret del repo per firma e account di servizio | App Android su Play | sì: secret del repo (li imposta Marco) | - |
 
-Candidati per dopo: `godot-*` (progetti Godot), `monorepo-*` (progetti monorepo), `sito-statico`, `app-web-pwa`, `notifiche-locali`, `backup-export`, `acquisti-in-app`.
+### Monorepo (da `Associati`)
+
+| Id | Cosa fa | Quando usarlo | Esterno? | Richiede |
+|---|---|---|---|---|
+| [monorepo-npm-workspaces](monorepo-npm-workspaces/modulo.md) | Radice npm workspaces: script, `.gitignore`, `CLAUDE.md` | Progetto con più pacchetti | no | regole-base |
+| [monorepo-shared-zod](monorepo-shared-zod/modulo.md) | Pacchetto `shared` con schemi Zod, tipi ed enum | Client e server che scambiano dati | no | monorepo-npm-workspaces |
+| [monorepo-backend-nestjs](monorepo-backend-nestjs/modulo.md) | Backend NestJS + Prisma + Jest | Monorepo con API | no | monorepo-npm-workspaces, monorepo-shared-zod |
+| [monorepo-frontend-expo](monorepo-frontend-expo/modulo.md) | Frontend Expo web-first con Metro per monorepo | Monorepo con app Expo | no | monorepo-npm-workspaces, monorepo-shared-zod |
+
+Candidati per dopo: `godot-*` (progetti Godot), `sito-statico`, `app-web-pwa`, `notifiche-locali`, `backup-export`, `acquisti-in-app`.
