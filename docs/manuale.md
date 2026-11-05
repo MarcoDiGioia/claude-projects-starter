@@ -74,7 +74,7 @@ Per un progetto esistente la regola è: **si aggiunge, non si sovrascrive.** Cla
 |---|---|
 | Workflow CI (`ci-*`, `godot-ci-*`) | Che non sostituiscano workflow esistenti; i nuovi sono solo manuali. Nomi dei secret già in uso. |
 | Struttura del codice (`android-rn`, `monorepo-*`, `godot-core-csharp`) | Spostano o aggiungono cartelle e configurazioni: valuta se il progetto è già organizzato in modo diverso. Spesso conviene adottare solo parti. |
-| Regole (`regole-base`, `godot-regole-csharp`) | Si fondono nel `CLAUDE.md` esistente; se ci sono regole in conflitto decidi tu quale vale. |
+| Regole (`regole-base`, `godot-regole-csharp`) | Si fondono nel `CLAUDE.md` esistente; se ci sono regole in conflitto decidi tu quale vale. `regole-base` porta anche `.claude/settings.json`, la skill `risparmio-token` e il subagente `esploratore`: le impostazioni si fondono con quelle esistenti. |
 | Moduli con azioni esterne | Chiedono sempre il tuo ok esplicito (sezione 8). |
 
 ### Esempi di richiesta
@@ -91,7 +91,7 @@ Nella radice di ogni progetto Claude tiene un piccolo file che dice quali moduli
 {
   "fonte": "claude-projects-starter",
   "moduli": [
-    { "id": "regole-base", "versione": 1 },
+    { "id": "regole-base", "versione": 2 },
     { "id": "android-rn", "versione": 1, "note": "adottato solo babel e metro" }
   ]
 }
