@@ -4,6 +4,8 @@ Cestino di moduli per Claude. Un modulo **non è codice da inserire in altri sof
 
 I moduli nascono da progetti reali, ripuliti dal contesto specifico: React Native per Android (`android-rn`, `ads-admob`, `ci-play-*`...), monorepo npm workspaces (`monorepo-*`) e Godot 4 in C# (`godot-*`).
 
+> **Due usi.** (1) Estendere un progetto Claude: le regole e le skill (`regole-base`, `risparmio-token`, `privacy-policy`) si leggono da qui quando servono, tramite il blocco in [`../PROGETTO.md`](../PROGETTO.md); non si installano nei repository. (2) Scaffold di un repository: la procedura sotto, solo quando l'utente crea o modifica un repo.
+
 ## Come Claude li usa
 
 - **Si legge, non si clona.** Claude non clona questo repository e non lo aggiunge ai progetti (né come dipendenza, né come sottomodulo). Legge dall'indirizzo pubblico solo i file che servono:

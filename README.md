@@ -2,9 +2,15 @@
 
 Un **cestino di moduli per Claude**, pensato per lavorare con [Claude Code](https://claude.ai/code). I moduli sono indicazioni e riferimenti che Claude legge quando servono, come skill che si carica da sé al bisogno: regole di lavoro, scheletri di codice, workflow di CI, procedure di pubblicazione. Descrivi il progetto, Claude sceglie i moduli giusti, ti mostra il piano e, dopo il tuo ok, ne applica quanto serve.
 
-Funziona sia per **progetti nuovi** sia per **progetti già avviati**. Il repository **non si clona e non entra nei tuoi progetti**: Claude legge dall'indirizzo pubblico solo i file che gli servono e scrive nel progetto soltanto ciò che serve, tale e quale se calza, altrimenti adattato.
+## Scopo
 
-## Come funziona in breve
+Lo scopo principale è **estendere un progetto Claude** (istruzioni, memoria, contesto) con riferimenti letti da qui, senza installare nulla né copiarlo nei repository. Il blocco da incollare nelle istruzioni di progetto è in [`PROGETTO.md`](PROGETTO.md): poche righe che dicono a Claude quando leggere regole, skill e procedure dal repository pubblico.
+
+I moduli di scaffold (app React Native, CI, store, monorepo, Godot) sono una parte a parte: servono solo quando si crea o si modifica un repository. In quel caso Claude scrive nel repo i file necessari, su un branch e con una PR.
+
+Il repository **non si clona**: Claude legge dall'indirizzo pubblico solo i file che gli servono.
+
+## Come funziona in breve (moduli di scaffold per i repository)
 
 1. **Scrivi "usa claude-projects-starter"** nella richiesta. Il repository è pubblico: non serve dargli accesso.
 2. **Descrivi il progetto** in poche righe: che cosa fa, per quale piattaforma, se ha pubblicità, se va su uno store, in quali lingue.
