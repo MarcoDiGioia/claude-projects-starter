@@ -67,9 +67,9 @@ Sono i valori predefiniti di [`moduli/regole-base`](moduli/regole-base/modulo.md
 - [Proposta](docs/proposta-moduli.md): perché è fatto così.
 - [Procedura di Claude](moduli/README.md) e [catalogo](moduli/CATALOGO.md).
 
-## Wiki
+## Documentazione di consultazione
 
-La wiki si genera dai documenti del repository con `scripts/genera-wiki.sh <cartella>`; la fonte di verità resta il repository.
+La cartella [`wiki/`](wiki/README.md) raccoglie la documentazione di consultazione: manuale, procedura, catalogo e una pagina per modulo. È generata da `moduli/` e `docs/` con `scripts/genera-wiki.sh wiki --markdown`; la fonte di verità resta `moduli/` e `docs/`. Lo stesso script, senza `--markdown`, produce le pagine per una wiki GitHub.
 
 ## Licenza
 
