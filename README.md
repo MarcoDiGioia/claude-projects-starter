@@ -57,7 +57,7 @@ Dettagli e dipendenze in [`moduli/CATALOGO.md`](moduli/CATALOGO.md).
 - **Niente pubblicazione in produzione** senza una tua richiesta esplicita.
 - **I progetti esistenti non cambiano da soli:** ogni aggiornamento passa da una pull request che decidi tu.
 
-- **Meno token possibile.** Risposte brevi, letture parziali, output dei comandi filtrato, ricerche delegate a un subagente leggero, contesto compattato: regole, skill, subagente e impostazioni nel modulo `risparmio-token`, consigliato da `regole-base`.
+- **Meno spreco di token, mai meno qualità.** Niente letture ripetute, output senza rumore, ricerche delegate, contesto compattato con criterio: regole, skill e subagente nel modulo `risparmio-token`, consigliato da `regole-base`. Nel conflitto vince sempre la qualità.
 
 Sono i valori predefiniti di [`moduli/regole-base`](moduli/regole-base/modulo.md): adattali al tuo modo di lavorare.
 

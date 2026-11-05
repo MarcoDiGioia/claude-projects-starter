@@ -1,7 +1,7 @@
 ---
 id: risparmio-token
 versione: 1
-descrizione: Regole, skill, subagente e impostazioni per ridurre il consumo di token.
+descrizione: Regole, skill, subagente per ridurre lo spreco di token senza perdere qualità.
 quando_usarlo: Consigliato per ogni progetto; proporlo sempre nel piano insieme a regole-base.
 quando_no: Se l'utente preferisce non limitare letture e output.
 etichette: [sempre]
@@ -10,25 +10,26 @@ conflitti: []
 azioni_esterne: false
 ---
 
+## Regola salda
+**Il modulo non deve mai ridurre le prestazioni di Claude.** Nel conflitto tra risparmio e qualità vince la qualità. Per questo il modulo taglia solo lo spreco e non tocca modello, sforzo di ragionamento, verifiche, limiti di lettura o dimensione degli output. Ogni nuova regola va controllata con questa domanda: "può far perdere informazione o precisione?". Se sì, non entra.
+
 ## File
 | Da (nel modulo) | A (nel nuovo progetto) |
 |---|---|
 | `files/CLAUDE.risparmio-token.md` | in coda al `CLAUDE.md` del progetto (dopo `regole-base`) |
-| `files/.claude/settings.json` | `.claude/settings.json` (se esiste già, unire `env` e `permissions.deny`) |
 | `files/.claude/skills/risparmio-token/SKILL.md` | stesso percorso |
 | `files/.claude/agents/esploratore.md` | stesso percorso |
 
 ## Cosa fa
-- **Regole** (`CLAUDE.risparmio-token.md`): 8 regole brevi, sempre in contesto. Il dettaglio sta nella skill, che si carica solo quando serve.
-- **Skill `risparmio-token`**: gestione del contesto (`/compact`, `/clear`, `/context`, `/cost`), letture parziali, filtro dell'output dei comandi, scelta di modello e sforzo, prompt caching, `CLAUDE.md` snello.
-- **Subagente `esploratore`**: ricerca in sola lettura con modello `haiku`; nel contesto principale torna solo la conclusione.
-- **`.claude/settings.json`**: limita l'output di Bash (`BASH_MAX_OUTPUT_LENGTH`) e degli strumenti MCP (`MAX_MCP_OUTPUT_TOKENS`), imposta `haiku` per i subagenti (`CLAUDE_CODE_SUBAGENT_MODEL`), disattiva le chiamate al modello non essenziali e vieta la lettura di cartelle e file inutili (`node_modules`, build, `.godot`, lockfile, log).
+- **Regole** (`CLAUDE.risparmio-token.md`): la regola salda più 8 regole brevi, sempre in contesto. Il dettaglio sta nella skill, che si carica solo quando serve.
+- **Skill `risparmio-token`**: gestione del contesto (`/compact`, `/clear`, `/context`, `/cost`), ricerca prima della lettura, output dei comandi senza rumore, prompt caching, `CLAUDE.md` snello.
+- **Subagente `esploratore`**: ricerca in sola lettura con lo stesso modello della sessione (`model: inherit`); tiene le molte letture fuori dal contesto principale.
 
-## Note
-Modello principale e sforzo non sono fissati: si scelgono per compito (`/model`, `/effort`). Per un modello predefinito aggiungere `"model"` in `.claude/settings.json`. L'elenco `deny` va adattato alle cartelle del progetto.
+## Cosa non fa (di proposito)
+Nessun `.claude/settings.json` di default: limiti all'output di Bash o MCP, divieti di lettura (`node_modules`, build, lockfile) e un modello leggero per i subagenti possono far perdere informazione o precisione. Sono scelte facoltative dell'utente, da aggiungere a mano sapendo il rischio. Il modello principale e lo sforzo non si fissano: li sceglie l'utente.
 
 ## Passi manuali
-Nessuno. Facoltativo: adattare l'elenco `deny` e disattivare con `/mcp` i server MCP non usati.
+Nessuno. Facoltativo: disattivare con `/mcp` i server MCP non usati.
 
 ## Verifica
-`CLAUDE.md` contiene la sezione "Risparmio di token"; `python3 -m json.tool .claude/settings.json` non dà errori; esistono `.claude/skills/risparmio-token/SKILL.md` e `.claude/agents/esploratore.md`.
+`CLAUDE.md` contiene la sezione "Risparmio di token" con la regola salda; esistono `.claude/skills/risparmio-token/SKILL.md` e `.claude/agents/esploratore.md`.
