@@ -12,12 +12,12 @@ azioni_esterne: false
 
 Senza codice di dominio.
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/package.json` | `package.json` (radice) |
-| `files/.gitignore` | `.gitignore` |
-| `files/CLAUDE.md` | `CLAUDE.md` (unire con quello di `regole-base`) |
+| `riferimenti/package.json` | `package.json` (radice) |
+| `riferimenti/.gitignore` | `.gitignore` |
+| `riferimenti/CLAUDE.md` | `CLAUDE.md` (unire con quello di `regole-base`) |
 
 ## Segnaposto
 `APP_SCOPE`: scope npm in minuscolo (es. `miaapp` → `@miaapp/shared`).

@@ -10,10 +10,10 @@ conflitti: []
 azioni_esterne: true   # pubblica su Google Play
 ---
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/.github/workflows/deploy-production.yml` | `.github/workflows/deploy-production.yml` |
+| `riferimenti/.github/workflows/deploy-production.yml` | `.github/workflows/deploy-production.yml` |
 
 ## Segnaposto
 `APP_PACKAGE_ID` (nel workflow).

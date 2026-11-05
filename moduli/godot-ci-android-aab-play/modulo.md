@@ -12,10 +12,10 @@ azioni_esterne: true   # carica una build su Google Play
 
 **Scelta**: trigger solo `workflow_dispatch` (regola: workflow CI solo manuali), niente caricamento a ogni push.
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/.github/workflows/release-play-store.yml` | `.github/workflows/release-play-store.yml` |
+| `riferimenti/.github/workflows/release-play-store.yml` | `.github/workflows/release-play-store.yml` |
 
 ## Segnaposto
 `APP_PROJECT`, `APP_PACKAGE_ID` (package Android, es. `com.esempio.nomegioco`).

@@ -12,13 +12,13 @@ azioni_esterne: false
 
 Le integrazioni specifiche (autenticazione gestita, pagamenti, monitoraggio, notifiche push, PDF, email) non sono incluse: si aggiungono caso per caso.
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/backend/package.json` | `backend/package.json` |
-| `files/backend/tsconfig.json` | `backend/tsconfig.json` |
-| `files/backend/.env.example` | `backend/.env.example` |
-| `files/backend/CLAUDE.md` | `backend/CLAUDE.md` |
+| `riferimenti/backend/package.json` | `backend/package.json` |
+| `riferimenti/backend/tsconfig.json` | `backend/tsconfig.json` |
+| `riferimenti/backend/.env.example` | `backend/.env.example` |
+| `riferimenti/backend/CLAUDE.md` | `backend/CLAUDE.md` |
 
 ## Segnaposto
 `APP_SCOPE`, `APP_SLUG`.

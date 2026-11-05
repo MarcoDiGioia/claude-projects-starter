@@ -10,12 +10,12 @@ conflitti: []
 azioni_esterne: false
 ---
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/shared/src/utils/config/` (`types.ts`, `index.ts`, `dev.ts`, `test.ts`, `prod.ts`) | `shared/src/utils/config/` |
-| `files/shared/src/utils/constants.ts` | `shared/src/utils/constants.ts` |
-| `files/ENVIRONMENTS.md` | `ENVIRONMENTS.md` |
+| `riferimenti/shared/src/utils/config/` (`types.ts`, `index.ts`, `dev.ts`, `test.ts`, `prod.ts`) | `shared/src/utils/config/` |
+| `riferimenti/shared/src/utils/constants.ts` | `shared/src/utils/constants.ts` |
+| `riferimenti/ENVIRONMENTS.md` | `ENVIRONMENTS.md` |
 
 ## Segnaposto
 `APP_SLUG`, `APP_DISPLAY_NAME`.

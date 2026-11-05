@@ -12,10 +12,10 @@ azioni_esterne: false
 
 Senza percorsi locali né server MCP personali (`.mcp.json` resta fuori dal repository, vedi `godot-core-csharp/.gitignore`).
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/CLAUDE.godot.md` | in coda al `CLAUDE.md` del progetto (dopo `regole-base`) |
+| `riferimenti/CLAUDE.godot.md` | in coda al `CLAUDE.md` del progetto (dopo `regole-base`) |
 
 ## Segnaposto
 `APP_PROJECT`.

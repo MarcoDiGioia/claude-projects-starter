@@ -1,16 +1,16 @@
 # claude-projects-starter
 
-Un **cestino di moduli di configurazione riutilizzabili** per i tuoi progetti software, pensato per lavorare con [Claude Code](https://claude.ai/code). Descrivi il progetto, Claude sceglie i moduli giusti, ti mostra il piano e, dopo il tuo ok, li applica: regole di lavoro, scheletro del codice, workflow di CI, procedure di pubblicazione.
+Un **cestino di moduli per Claude**, pensato per lavorare con [Claude Code](https://claude.ai/code). I moduli sono indicazioni e riferimenti che Claude legge quando servono, come skill che si carica da sé al bisogno: regole di lavoro, scheletri di codice, workflow di CI, procedure di pubblicazione. Descrivi il progetto, Claude sceglie i moduli giusti, ti mostra il piano e, dopo il tuo ok, ne applica quanto serve.
 
-Funziona sia per **progetti nuovi** sia per **progetti già avviati**, e non richiede skill né strumenti speciali: i moduli sono file e schede di testo in questo repository.
+Funziona sia per **progetti nuovi** sia per **progetti già avviati**. Il repository **non si clona e non entra nei tuoi progetti**: Claude legge dall'indirizzo pubblico solo i file che gli servono e scrive nel progetto soltanto ciò che serve, tale e quale se calza, altrimenti adattato.
 
 ## Come funziona in breve
 
-1. **Dai accesso a Claude a questo repository** (o scrivi "usa claude-projects-starter" nella richiesta).
+1. **Scrivi "usa claude-projects-starter"** nella richiesta. Il repository è pubblico: non serve dargli accesso.
 2. **Descrivi il progetto** in poche righe: che cosa fa, per quale piattaforma, se ha pubblicità, se va su uno store, in quali lingue.
 3. Claude ricava poche **etichette** dalla descrizione e, con la tabella di [`moduli/SELEZIONE.md`](moduli/SELEZIONE.md), sceglie i moduli.
 4. Claude ti mostra il **piano**: moduli scelti e perché, moduli esclusi, azioni esterne, passi manuali. **Non applica nulla finché non dai l'ok.**
-5. Claude applica i moduli su un branch, verifica (build, test) e apre una pull request. Ti consegna la lista dei **passi manuali** che solo tu puoi fare (secret, console degli store).
+5. Claude scrive nel progetto, su un branch, quanto serve dai moduli scelti, verifica (build, test) e apre una pull request. Ti consegna la lista dei **passi manuali** che solo tu puoi fare (secret, console degli store).
 
 ## Esempio
 
@@ -34,7 +34,7 @@ claude-projects-starter/
     ├── SELEZIONE.md          # tabella etichetta → moduli
     └── <id>/
         ├── modulo.md         # scheda: cosa fa, quando usarlo, passi manuali, verifica
-        └── files/            # i file, già nel percorso di destinazione
+        └── riferimenti/     # file di riferimento, nel percorso che avrebbero nel progetto
 ```
 
 ## Moduli disponibili

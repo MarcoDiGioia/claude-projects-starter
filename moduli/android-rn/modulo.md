@@ -10,15 +10,15 @@ conflitti: []
 azioni_esterne: false
 ---
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/mobile/babel.config.js` | `mobile/babel.config.js` |
-| `files/mobile/metro.config.js` | `mobile/metro.config.js` |
-| `files/mobile/tsconfig.json` | `mobile/tsconfig.json` |
-| `files/mobile/package.json` | `mobile/package.json` (unire con quello creato da `init`) |
-| `files/mobile/.env.example` | `mobile/.env.example` |
-| `files/.gitignore` | `.gitignore` |
+| `riferimenti/mobile/babel.config.js` | `mobile/babel.config.js` |
+| `riferimenti/mobile/metro.config.js` | `mobile/metro.config.js` |
+| `riferimenti/mobile/tsconfig.json` | `mobile/tsconfig.json` |
+| `riferimenti/mobile/package.json` | `mobile/package.json` (unire con quello creato da `init`) |
+| `riferimenti/mobile/.env.example` | `mobile/.env.example` |
+| `riferimenti/.gitignore` | `.gitignore` |
 
 ## Segnaposto
 `APP_SLUG`, `APP_PACKAGE_ID`, `APP_DISPLAY_NAME`.

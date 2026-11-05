@@ -10,11 +10,11 @@ conflitti: []
 azioni_esterne: false
 ---
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/mobile/src/services/AdsService.ts` | `mobile/src/services/AdsService.ts` |
-| `files/mobile/src/components/BannerAd.tsx` | `mobile/src/components/BannerAd.tsx` |
+| `riferimenti/mobile/src/services/AdsService.ts` | `mobile/src/services/AdsService.ts` |
+| `riferimenti/mobile/src/components/BannerAd.tsx` | `mobile/src/components/BannerAd.tsx` |
 
 ## Comportamento
 - Consenso GDPR (UMP) raccolto prima di inizializzare AdMob; se la rete manca o UMP non risponde entro 10 s l'app parte senza annunci.

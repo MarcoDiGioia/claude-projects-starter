@@ -10,10 +10,10 @@ conflitti: []
 azioni_esterne: false
 ---
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/CLAUDE.base.md` | `CLAUDE.md` (se esiste già, unire le regole in cima) |
+| `riferimenti/CLAUDE.base.md` | `CLAUDE.md` (se esiste già, unire le regole in cima) |
 
 ## Note
 Il `CLAUDE.md` include la regola che consiglia attivamente il modulo `risparmio-token`: proporlo sempre nel piano.

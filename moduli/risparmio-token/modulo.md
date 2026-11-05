@@ -13,12 +13,12 @@ azioni_esterne: false
 ## Regola salda
 **Il modulo non deve mai ridurre le prestazioni di Claude.** Nel conflitto tra risparmio e qualità vince la qualità. Per questo il modulo taglia solo lo spreco e non tocca modello, sforzo di ragionamento, verifiche, limiti di lettura o dimensione degli output. Ogni nuova regola va controllata con questa domanda: "può far perdere informazione o precisione?". Se sì, non entra.
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/CLAUDE.risparmio-token.md` | in coda al `CLAUDE.md` del progetto (dopo `regole-base`) |
-| `files/.claude/skills/risparmio-token/SKILL.md` | stesso percorso |
-| `files/.claude/agents/esploratore.md` | stesso percorso |
+| `riferimenti/CLAUDE.risparmio-token.md` | in coda al `CLAUDE.md` del progetto (dopo `regole-base`) |
+| `riferimenti/.claude/skills/risparmio-token/SKILL.md` | stesso percorso |
+| `riferimenti/.claude/agents/esploratore.md` | stesso percorso |
 
 ## Cosa fa
 - **Regole** (`CLAUDE.risparmio-token.md`): la regola salda più 8 regole brevi, sempre in contesto. Il dettaglio sta nella skill, che si carica solo quando serve.

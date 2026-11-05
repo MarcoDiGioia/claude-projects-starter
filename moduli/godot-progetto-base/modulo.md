@@ -10,10 +10,10 @@ conflitti: []
 azioni_esterne: false
 ---
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/Godot/project.godot` | `Godot/project.godot` |
+| `riferimenti/Godot/project.godot` | `Godot/project.godot` |
 
 ## Segnaposto
 `APP_DISPLAY_NAME`, `APP_PROJECT`.

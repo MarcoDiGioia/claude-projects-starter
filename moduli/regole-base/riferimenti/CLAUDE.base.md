@@ -22,4 +22,4 @@ Regole valide per tutti i progetti (modulo `regole-base`). Aggiungere sotto le r
 
 ## Moduli consigliati
 
-Usando claude-projects-starter, consigliare attivamente all'utente anche il modulo `risparmio-token` (regole, skill e subagente per ridurre lo spreco di token senza perdere qualità): proporlo nel piano e applicarlo dopo l'ok.
+claude-projects-starter è un insieme di istruzioni per Claude: non si clona e nulla di esso entra nel codice del progetto, se non ciò che Claude scrive. Usandolo, consigliare attivamente all'utente anche il modulo `risparmio-token` (regole, skill e subagente per ridurre lo spreco di token senza perdere qualità): proporlo nel piano e applicarlo dopo l'ok.

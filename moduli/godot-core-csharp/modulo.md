@@ -12,17 +12,17 @@ azioni_esterne: false
 
 Solo infrastruttura, senza codice di dominio.
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/Godot/APP_PROJECT.csproj` | `Godot/APP_PROJECT.csproj` (e creare `APP_PROJECT.sln` con `dotnet new sln`) |
-| `files/Godot/Scripts/Core/DI/ServiceLocator.cs` | stesso percorso |
-| `files/Godot/Scripts/Core/Events/EventBus.cs` | stesso percorso |
-| `files/Godot/Scripts/Core/Services/SaveService.cs` | stesso percorso |
-| `files/Godot/Scripts/Core/BuildInfo.cs` | stesso percorso |
-| `files/Godot/Scripts/Domain/Models/SaveData.cs` | stesso percorso (da riempire) |
-| `files/Godot/Scripts/Tests/TestRunner.cs` | stesso percorso |
-| `files/.gitignore` | `.gitignore` |
+| `riferimenti/Godot/APP_PROJECT.csproj` | `Godot/APP_PROJECT.csproj` (e creare `APP_PROJECT.sln` con `dotnet new sln`) |
+| `riferimenti/Godot/Scripts/Core/DI/ServiceLocator.cs` | stesso percorso |
+| `riferimenti/Godot/Scripts/Core/Events/EventBus.cs` | stesso percorso |
+| `riferimenti/Godot/Scripts/Core/Services/SaveService.cs` | stesso percorso |
+| `riferimenti/Godot/Scripts/Core/BuildInfo.cs` | stesso percorso |
+| `riferimenti/Godot/Scripts/Domain/Models/SaveData.cs` | stesso percorso (da riempire) |
+| `riferimenti/Godot/Scripts/Tests/TestRunner.cs` | stesso percorso |
+| `riferimenti/.gitignore` | `.gitignore` |
 
 ## Segnaposto
 `APP_PROJECT`: nome del progetto in PascalCase, senza spazi (es. `MiaApp`); è anche namespace C# e `project/assembly_name` in `project.godot`.
