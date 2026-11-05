@@ -41,7 +41,7 @@ claude-projects-starter/
 
 | Famiglia | Moduli |
 |---|---|
-| Per tutti | `regole-base` |
+| Per tutti | `regole-base`, `risparmio-token` |
 | App React Native per Android | `android-rn`, `multi-ambiente`, `i18n-6-lingue`, `ads-admob` |
 | Pubblicazione su Google Play | `ci-play-internal`, `ci-play-production`, `play-store-scheda`, `play-store-grafiche`, `play-console-checklist`, `firma-android`, `privacy-policy` |
 | Monorepo npm workspaces *(bozza)* | `monorepo-npm-workspaces`, `monorepo-shared-zod`, `monorepo-backend-nestjs`, `monorepo-frontend-expo` |
@@ -56,6 +56,8 @@ Dettagli e dipendenze in [`moduli/CATALOGO.md`](moduli/CATALOGO.md).
 - **Workflow CI solo manuali** (`workflow_dispatch`), per risparmiare minuti di Actions.
 - **Niente pubblicazione in produzione** senza una tua richiesta esplicita.
 - **I progetti esistenti non cambiano da soli:** ogni aggiornamento passa da una pull request che decidi tu.
+
+- **Meno spreco di token, mai meno qualità.** Niente letture ripetute, output senza rumore, ricerche delegate, contesto compattato con criterio: regole, skill e subagente nel modulo `risparmio-token`, consigliato da `regole-base`. Nel conflitto vince sempre la qualità.
 
 Sono i valori predefiniti di [`moduli/regole-base`](moduli/regole-base/modulo.md): adattali al tuo modo di lavorare.
 

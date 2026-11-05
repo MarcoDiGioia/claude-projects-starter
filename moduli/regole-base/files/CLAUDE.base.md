@@ -19,3 +19,7 @@ Regole valide per tutti i progetti (modulo `regole-base`). Aggiungere sotto le r
 - Semplicità prima di tutto: ogni modifica la più semplice possibile, con impatto minimo.
 - Trovare la causa vera dei problemi, niente soluzioni temporanee.
 - Toccare solo il necessario.
+
+## Moduli consigliati
+
+Usando claude-projects-starter, consigliare attivamente all'utente anche il modulo `risparmio-token` (regole, skill e subagente per ridurre lo spreco di token senza perdere qualità): proporlo nel piano e applicarlo dopo l'ok.

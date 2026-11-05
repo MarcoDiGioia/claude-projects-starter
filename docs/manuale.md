@@ -74,7 +74,7 @@ Per un progetto esistente la regola è: **si aggiunge, non si sovrascrive.** Cla
 |---|---|
 | Workflow CI (`ci-*`, `godot-ci-*`) | Che non sostituiscano workflow esistenti; i nuovi sono solo manuali. Nomi dei secret già in uso. |
 | Struttura del codice (`android-rn`, `monorepo-*`, `godot-core-csharp`) | Spostano o aggiungono cartelle e configurazioni: valuta se il progetto è già organizzato in modo diverso. Spesso conviene adottare solo parti. |
-| Regole (`regole-base`, `godot-regole-csharp`) | Si fondono nel `CLAUDE.md` esistente; se ci sono regole in conflitto decidi tu quale vale. |
+| Regole (`regole-base`, `risparmio-token`, `godot-regole-csharp`) | Si fondono nel `CLAUDE.md` esistente; se ci sono regole in conflitto decidi tu quale vale. `risparmio-token` porta anche una skill e il subagente `esploratore` in `.claude/`. |
 | Moduli con azioni esterne | Chiedono sempre il tuo ok esplicito (sezione 8). |
 
 ### Esempi di richiesta
@@ -91,7 +91,8 @@ Nella radice di ogni progetto Claude tiene un piccolo file che dice quali moduli
 {
   "fonte": "claude-projects-starter",
   "moduli": [
-    { "id": "regole-base", "versione": 1 },
+    { "id": "regole-base", "versione": 2 },
+    { "id": "risparmio-token", "versione": 1 },
     { "id": "android-rn", "versione": 1, "note": "adottato solo babel e metro" }
   ]
 }
@@ -160,7 +161,7 @@ Regole per i moduli:
 
 ## 10. Domande frequenti
 
-**Devo usare tutti i moduli?** No. Solo `regole-base` è sempre consigliato; il resto si sceglie.
+**Devo usare tutti i moduli?** No. Solo `regole-base` è sempre consigliato (e `risparmio-token` fortemente raccomandato); il resto si sceglie.
 
 **Posso usare un modulo a metà?** Sì. Chiedi a Claude di adottarne solo le parti che ti servono; verrà annotato in `.moduli.json`.
 

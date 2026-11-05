@@ -3,6 +3,7 @@
 | Id | Cosa fa | Quando usarlo | Esterno? | Richiede |
 |---|---|---|---|---|
 | [regole-base](regole-base/modulo.md) | `CLAUDE.md` di partenza con le regole valide per tutti | Sempre | no | - |
+| [risparmio-token](risparmio-token/modulo.md) | Regole, skill e subagente `esploratore` per ridurre lo spreco di token senza perdere qualità | Consigliato sempre | no | regole-base |
 | [android-rn](android-rn/modulo.md) | Scheletro React Native 0.85: babel, metro, tsconfig, alias, script npm | App mobile Android | no | regole-base |
 | [multi-ambiente](multi-ambiente/modulo.md) | Config dev/test/prod, `constants.ts`, `ENVIRONMENTS.md` | Ogni app React Native che segue la struttura del cestino | no | android-rn |
 | [i18n-6-lingue](i18n-6-lingue/modulo.md) | Traduzioni it/en/es/fr/de/pt con `t()` e test | App in più lingue (default sì) | no | android-rn |
