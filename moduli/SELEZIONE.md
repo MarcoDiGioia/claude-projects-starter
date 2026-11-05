@@ -1,9 +1,10 @@
 # Selezione dei moduli
 
-`regole-base` si applica sempre. Le dipendenze (`richiede`) si aggiungono da sole.
+`regole-base` si applica sempre; `risparmio-token` è consigliato sempre (proporlo nel piano). Le dipendenze (`richiede`) si aggiungono da sole.
 
 | Etichetta | Come si riconosce nella descrizione | Moduli |
 |---|---|---|
+| `sempre` | ogni progetto | `regole-base`, `risparmio-token` (consigliato) |
 | `android` | "app Android", "app mobile", nessuna piattaforma indicata per un'app | `android-rn`, `multi-ambiente` |
 | `ads` | "gratuita con pubblicità", "monetizzata con AdMob" | `ads-admob` |
 | `multilingua` | più lingue, o nessuna indicazione (default) | `i18n-6-lingue` |
