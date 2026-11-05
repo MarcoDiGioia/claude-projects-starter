@@ -12,10 +12,10 @@ azioni_esterne: false
 
 **Scelta**: trigger solo `workflow_dispatch`, niente build a ogni push.
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/.github/workflows/build-desktop.yml` | `.github/workflows/build-desktop.yml` |
+| `riferimenti/.github/workflows/build-desktop.yml` | `.github/workflows/build-desktop.yml` |
 
 ## Segnaposto
 `APP_PROJECT`.

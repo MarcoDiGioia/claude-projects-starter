@@ -12,13 +12,13 @@ azioni_esterne: false
 
 Non inclusi: SVG transformer, NativeWind, il design system e i componenti specifici di un progetto.
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/frontend/metro.config.js` | `frontend/metro.config.js` |
-| `files/frontend/tsconfig.json` | `frontend/tsconfig.json` |
-| `files/frontend/.env.example` | `frontend/.env.example` |
-| `files/frontend/CLAUDE.md` | `frontend/CLAUDE.md` |
+| `riferimenti/frontend/metro.config.js` | `frontend/metro.config.js` |
+| `riferimenti/frontend/tsconfig.json` | `frontend/tsconfig.json` |
+| `riferimenti/frontend/.env.example` | `frontend/.env.example` |
+| `riferimenti/frontend/CLAUDE.md` | `frontend/CLAUDE.md` |
 
 ## Segnaposto
 `APP_SCOPE`.

@@ -10,12 +10,12 @@ conflitti: []
 azioni_esterne: true   # scrive la scheda su Google Play
 ---
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/store/listings/<lingua>/{title,short_description,full_description}.txt` (it-IT, en-US, en-GB, es-ES, fr-FR, de-DE, pt-PT) | `store/listings/` |
-| `files/.github/workflows/update-store-listing.yml` | `.github/workflows/update-store-listing.yml` |
-| `files/.github/scripts/update_store_listing.py` | `.github/scripts/update_store_listing.py` |
+| `riferimenti/store/listings/<lingua>/{title,short_description,full_description}.txt` (it-IT, en-US, en-GB, es-ES, fr-FR, de-DE, pt-PT) | `store/listings/` |
+| `riferimenti/.github/workflows/update-store-listing.yml` | `.github/workflows/update-store-listing.yml` |
+| `riferimenti/.github/scripts/update_store_listing.py` | `.github/scripts/update_store_listing.py` |
 
 ## Segnaposto
 `APP_DISPLAY_NAME` (titolo), `APP_PACKAGE_ID` (workflow).

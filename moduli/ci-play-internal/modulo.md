@@ -10,11 +10,11 @@ conflitti: []
 azioni_esterne: true   # carica una build su Google Play
 ---
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/.github/workflows/deploy-internal.yml` | `.github/workflows/deploy-internal.yml` |
-| `files/store/whatsnew/whatsnew-<lingua>` (7 file: it-IT, en-US, en-GB, es-ES, fr-FR, de-DE, pt-PT) | `store/whatsnew/` |
+| `riferimenti/.github/workflows/deploy-internal.yml` | `.github/workflows/deploy-internal.yml` |
+| `riferimenti/store/whatsnew/whatsnew-<lingua>` (7 file: it-IT, en-US, en-GB, es-ES, fr-FR, de-DE, pt-PT) | `store/whatsnew/` |
 
 ## Segnaposto
 `APP_PACKAGE_ID` (nel workflow).

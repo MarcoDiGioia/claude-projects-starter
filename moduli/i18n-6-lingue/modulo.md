@@ -10,11 +10,11 @@ conflitti: []
 azioni_esterne: false
 ---
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/shared/src/i18n/` (`index.ts`, `it.ts`, `en.ts`, `es.ts`, `fr.ts`, `de.ts`, `pt.ts`) | `shared/src/i18n/` |
-| `files/mobile/__tests__/i18n.test.ts` | `mobile/__tests__/i18n.test.ts` |
+| `riferimenti/shared/src/i18n/` (`index.ts`, `it.ts`, `en.ts`, `es.ts`, `fr.ts`, `de.ts`, `pt.ts`) | `shared/src/i18n/` |
+| `riferimenti/mobile/__tests__/i18n.test.ts` | `mobile/__tests__/i18n.test.ts` |
 
 ## Note
 - Lingua del telefono, inglese se non supportata.

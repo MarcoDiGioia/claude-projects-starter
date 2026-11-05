@@ -12,10 +12,10 @@ azioni_esterne: false
 
 **Scelte**: trigger solo manuale (`workflow_dispatch`), niente build a ogni push; la chiave di debug standard viene creata nel runner, così nel repo non entra nessun keystore.
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/.github/workflows/build-android-preview.yml` | `.github/workflows/build-android-preview.yml` |
+| `riferimenti/.github/workflows/build-android-preview.yml` | `.github/workflows/build-android-preview.yml` |
 
 ## Segnaposto
 `APP_PROJECT`.

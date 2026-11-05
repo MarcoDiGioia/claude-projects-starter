@@ -17,7 +17,7 @@ Questo manuale spiega come usare il cestino di moduli in **progetti nuovi** e in
 
 ## 1. Concetti
 
-- **Modulo**: una cartella in `moduli/<id>/` con una scheda `modulo.md` (cosa fa, quando usarlo, dipendenze, passi manuali, verifica) e, di solito, una cartella `files/` con i file già nel percorso di destinazione.
+- **Modulo**: una cartella in `moduli/<id>/` con una scheda `modulo.md` (cosa fa, quando usarlo, dipendenze, passi manuali, verifica) e, di solito, una cartella `riferimenti/` con i file di esempio che Claude può scrivere tali e quali o adattare. I moduli sono istruzioni per Claude, non codice da inserire in altri software.
 - **Etichetta**: una parola che descrive il progetto (`android`, `ads`, `play`, `monorepo`, `godot`...). Claude le ricava dalla tua descrizione.
 - **Selezione**: la tabella [`moduli/SELEZIONE.md`](../moduli/SELEZIONE.md) che collega etichette e moduli.
 - **Dipendenze**: il campo `richiede` di un modulo elenca i moduli che servono prima; il campo `conflitti` quelli incompatibili.
@@ -26,7 +26,7 @@ Questo manuale spiega come usare il cestino di moduli in **progetti nuovi** e in
 
 ## 2. Prima di iniziare
 
-1. **Dai accesso a Claude** a questo repository e al repository del tuo progetto, con permesso di scrittura sul secondo.
+1. **Dai accesso a Claude** al repository del tuo progetto, con permesso di scrittura. Questo repository è pubblico: Claude lo legge senza accessi e senza clonarlo.
 2. **Dillo a Claude**: scrivi "usa claude-projects-starter" nella richiesta. Per non ripeterlo, aggiungi la stessa riga nel `CLAUDE.md` del progetto.
 3. Se il progetto non esiste ancora, crea un repository vuoto (Claude non crea repository per te).
 4. Leggi [`moduli/CATALOGO.md`](../moduli/CATALOGO.md) per sapere cosa è disponibile.
@@ -38,7 +38,7 @@ Questo manuale spiega come usare il cestino di moduli in **progetti nuovi** e in
 1. **Descrivi il progetto**: scopo, piattaforma, monetizzazione, store, lingue. Più sei preciso, meno domande ti farà Claude (ne fa una sola, solo se manca un'informazione che cambia la scelta).
 2. **Leggi il piano** che Claude ti mostra: moduli scelti con la ragione di una riga, moduli esclusi, azioni esterne, passi manuali. Puoi chiedere di aggiungere o togliere moduli.
 3. **Dai l'ok.** Senza ok non cambia nulla.
-4. **Claude applica** i moduli nell'ordine delle dipendenze, su un branch del repository del progetto: copia i file di `files/`, sostituisce i segnaposto, fa le modifiche descritte nella scheda.
+4. **Claude applica** i moduli nell'ordine delle dipendenze, su un branch del repository del progetto: legge dai moduli solo i riferimenti che servono, scrive nel progetto i file (tali e quali se calzano, altrimenti adattati), sostituisce i segnaposto, fa le modifiche descritte nella scheda.
 5. **Claude verifica** con la sezione "Verifica" di ogni modulo (per esempio type-check e build) e riporta l'esito con l'output reale.
 6. **Claude registra** i moduli applicati in `.moduli.json` (vedi sezione 5) e apre una pull request.
 7. **Tu fai i passi manuali** elencati (secret, console degli store, chiavi) e unisci la pull request quando sei soddisfatto.
@@ -115,7 +115,7 @@ Quando un modulo del cestino migliora, il campo `versione` della sua scheda sale
 | Claude fa | Solo tu fai |
 |---|---|
 | Analizzare il progetto e proporre i moduli | Decidere quali moduli adottare |
-| Copiare i file, sostituire i segnaposto, fondere i file esistenti (col tuo ok) | Impostare i secret del repository (chiavi, password, account di servizio) |
+| Scrivere nel progetto i file dei moduli (tali e quali o adattati), sostituire i segnaposto, fondere i file esistenti (col tuo ok) | Impostare i secret del repository (chiavi, password, account di servizio) |
 | Preparare workflow CI **manuali** | Lanciare i workflow |
 | Scrivere codice e testi, aprire le pull request | Creare le app e gli account sugli store e sulle console |
 | Descrivere le azioni esterne nel piano | Dare l'ok alle azioni esterne e alla pubblicazione in produzione |
@@ -128,7 +128,7 @@ Per i secret: Claude **non li vede, non li chiede in chat e non li scrive nei fi
 
 ## 9. Scrivere o modificare un modulo
 
-1. Crea `moduli/<id>/` con `modulo.md` e, se serve, `files/` (file già nel percorso di destinazione).
+1. Crea `moduli/<id>/` con `modulo.md` e, se serve, `riferimenti/` (file di esempio nel percorso che avrebbero nel progetto).
 2. Nella testata YAML di `modulo.md`:
 
    ```yaml
@@ -146,7 +146,7 @@ Per i secret: Claude **non li vede, non li chiede in chat e non li scrive nei fi
    ```
 
    Campi obbligatori: `id`, `versione`, `descrizione`, `quando_usarlo`, `etichette`, `azioni_esterne`.
-3. Sezioni consigliate: *File* (tabella da → a), *Segnaposto*, *Modifiche a file esistenti*, *Passi manuali*, *Verifica*.
+3. Sezioni consigliate: *Riferimenti* (tabella riferimento → destinazione), *Segnaposto*, *Modifiche a file esistenti*, *Passi manuali*, *Verifica*.
 4. Aggiungi la riga in `moduli/CATALOGO.md` e, se serve una nuova etichetta, in `moduli/SELEZIONE.md`.
 5. Alza `versione` a ogni modifica che cambia i file.
 6. Apri una pull request.
@@ -165,9 +165,11 @@ Regole per i moduli:
 
 **Posso usare un modulo a metà?** Sì. Chiedi a Claude di adottarne solo le parti che ti servono; verrà annotato in `.moduli.json`.
 
-**I moduli funzionano senza Claude?** Sì: le schede sono documentazione leggibile e `files/` si copia a mano con `cp -r moduli/<id>/files/. <progetto>/`, poi si sostituiscono i segnaposto (comando in [`moduli/README.md`](../moduli/README.md)).
+**I moduli funzionano senza Claude?** Sono pensati per Claude. Le schede si leggono anche a mano, ma nessun file va copiato in blocco in un altro software: sono riferimenti da adattare.
 
-**Serve una skill?** No. Se vorrai un comando comodo, una skill sottile si crea dalle impostazioni di claude.ai e dice solo "segui `moduli/README.md` di questo repository".
+**Devo clonare il repository?** No. Claude legge dall'indirizzo pubblico solo i file che servono (vedi [`moduli/README.md`](../moduli/README.md)).
+
+**Serve una skill?** No: i moduli fanno già da skill che Claude carica quando servono. Se vorrai un comando comodo, una skill sottile può dire solo "segui `moduli/README.md` di claude-projects-starter".
 
 **Cosa succede se la scelta di Claude non mi convince?** Il piano è sempre mostrato prima di agire: chiedi di cambiarlo. Dopo l'applicazione, tutto è in una pull request: si può modificare o chiudere senza conseguenze.
 

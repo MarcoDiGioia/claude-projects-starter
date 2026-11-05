@@ -8,11 +8,11 @@
 
 ## 1. Idea in breve
 
-Un **modulo** è una cartella con tre cose: una scheda (`modulo.md`) che dice cosa fa e quando usarlo, i file da copiare, e i passi manuali che Claude non può fare al posto tuo. Tutti i moduli stanno in `moduli/` di questo repository e c'è un **catalogo** unico che Claude legge per primo.
+Un **modulo** è una cartella con tre cose: una scheda (`modulo.md`) che dice cosa fa e quando usarlo, i file di riferimento che Claude può scrivere tali e quali o adattare, e i passi manuali che Claude non può fare al posto tuo. Tutti i moduli stanno in `moduli/` di questo repository e c'è un **catalogo** unico che Claude legge per primo.
 
 Claude non sceglie "a sensazione": legge la descrizione del progetto, ne ricava poche **etichette** (Android? pubblicità? dati personali? lingue?), e una tabella etichetta → moduli dice quali moduli servono. Prima di applicare qualsiasi cosa ti mostra il piano e aspetta il tuo ok.
 
-Questo non richiede skill vere: sono file in questo repository, che è il punto di riferimento. Se in seguito vorrai un comando comodo tipo "nuovo progetto", si può aggiungere una skill sopra (vedi sezione 6).
+I moduli sono **istruzioni per Claude, non codice da inserire in altri software**: Claude non clona il repository, ne legge dall'indirizzo pubblico solo i file che servono, e nel progetto scrive solo ciò che serve. Funzionano come skill che Claude carica da sé quando servono. Se in seguito vorrai un comando comodo tipo "nuovo progetto", si può aggiungere una skill sopra (vedi sezione 6).
 
 ---
 
@@ -28,10 +28,10 @@ claude-projects-starter/
     ├── SELEZIONE.md              # etichette + tabella etichetta → moduli
     ├── regole-base/              # sempre applicato, non si sceglie
     │   ├── modulo.md
-    │   └── files/CLAUDE.base.md
+    │   └── riferimenti/CLAUDE.base.md
     ├── android-rn/
     │   ├── modulo.md
-    │   └── files/...
+    │   └── riferimenti/...
     ├── multi-ambiente/
     ├── i18n-6-lingue/
     ├── ads-admob/
@@ -44,7 +44,7 @@ claude-projects-starter/
     └── firma-android/
 ```
 
-Nella cartella di ogni modulo, `files/` contiene i file già nel percorso in cui finiranno nel progetto di destinazione, così si copiano con un solo comando.
+Nella cartella di ogni modulo, `riferimenti/` contiene file di esempio già nel percorso che avrebbero nel progetto di destinazione: Claude li scrive tali e quali se calzano, altrimenti li adatta.
 
 ---
 
@@ -68,8 +68,8 @@ azioni_esterne: false        # true = tocca servizi fuori dal repo (Play, GitHub
 ## File
 | Da (nel modulo)                        | A (nel nuovo progetto)                      |
 |----------------------------------------|---------------------------------------------|
-| files/mobile/src/services/AdsService.ts | mobile/src/services/AdsService.ts       |
-| files/mobile/src/components/BannerAd.tsx | mobile/src/components/BannerAd.tsx     |
+| riferimenti/mobile/src/services/AdsService.ts | mobile/src/services/AdsService.ts       |
+| riferimenti/mobile/src/components/BannerAd.tsx | mobile/src/components/BannerAd.tsx     |
 
 ## Segnaposto
 APP_SLUG, APP_PACKAGE_ID, APP_DISPLAY_NAME (definiti in `moduli/README.md`)

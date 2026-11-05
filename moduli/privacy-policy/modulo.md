@@ -19,7 +19,7 @@ Le privacy policy stanno in un repository pubblico con GitHub Pages (es. `<tuo-u
 - Mettere l'URL in Play Console (Contenuti dell'app).
 
 ## Note
-Nessun file nel modulo: una pagina privacy dipende dai dati raccolti e dalla giurisdizione. Se ne hai una collaudata, aggiungila come `files/`.
+Nessun file nel modulo: una pagina privacy dipende dai dati raccolti e dalla giurisdizione. Se ne hai una collaudata, aggiungila come `riferimenti/`.
 
 ## Passi manuali (a carico dell'utente)
 Approvare la PR sul repository del sito e inserire l'URL in Play Console.

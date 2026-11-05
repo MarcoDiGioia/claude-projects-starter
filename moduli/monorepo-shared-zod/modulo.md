@@ -12,13 +12,13 @@ azioni_esterne: false
 
 Senza schemi di dominio.
 
-## File
-| Da (nel modulo) | A (nel nuovo progetto) |
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
 |---|---|
-| `files/shared/package.json` | `shared/package.json` |
-| `files/shared/tsconfig.json`, `tsconfig.build.json` | `shared/` |
-| `files/shared/src/index.ts` | `shared/src/index.ts` |
-| `files/shared/CLAUDE.md` | `shared/CLAUDE.md` |
+| `riferimenti/shared/package.json` | `shared/package.json` |
+| `riferimenti/shared/tsconfig.json`, `tsconfig.build.json` | `shared/` |
+| `riferimenti/shared/src/index.ts` | `shared/src/index.ts` |
+| `riferimenti/shared/CLAUDE.md` | `shared/CLAUDE.md` |
 
 ## Segnaposto
 `APP_SCOPE`.
