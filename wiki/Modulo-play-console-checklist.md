@@ -9,7 +9,7 @@ Elenco dei passi a mano in Play Console per una nuova app.
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/play-console-checklist](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/play-console-checklist)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/template/play-console-checklist](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/template/play-console-checklist)
 
 ## Passi manuali (a carico dell'utente)
 1. Creare l'app in Play Console con package `<APP_PACKAGE_ID>`.

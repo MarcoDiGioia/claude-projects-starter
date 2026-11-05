@@ -10,7 +10,7 @@ Banner + interstitial AdMob con consenso GDPR (UMP) e limite di frequenza.
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/ads-admob](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/ads-admob)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/ads-admob](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/ads-admob)
 
 ## Riferimenti
 | Riferimento (nel modulo) | Destinazione (nel progetto) |

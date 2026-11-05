@@ -17,7 +17,7 @@ Questo manuale spiega come usare il cestino di moduli in **progetti nuovi** e in
 
 ## 1. Concetti
 
-- **Modulo**: una cartella in `moduli/<id>/` con una scheda `modulo.md` (cosa fa, quando usarlo, dipendenze, passi manuali, verifica) e, di solito, una cartella `riferimenti/` con i file di esempio che Claude può scrivere tali e quali o adattare. I moduli sono istruzioni per Claude, non codice da inserire in altri software.
+- **Modulo**: una cartella in `<area>/<id>/` (area: `skill`, `regole`, `template` o `scaffold`) con una scheda `modulo.md` (cosa fa, quando usarlo, dipendenze, passi manuali, verifica) e, di solito, una cartella `riferimenti/` con i file di esempio che Claude può scrivere tali e quali o adattare. I moduli sono istruzioni per Claude, non codice da inserire in altri software.
 - **Etichetta**: una parola che descrive il progetto (`android`, `ads`, `play`, `monorepo`, `godot`...). Claude le ricava dalla tua descrizione.
 - **Selezione**: la tabella [`moduli/SELEZIONE.md`](https://github.com/MarcoDiGioia/claude-projects-starter/blob/main/moduli/SELEZIONE.md) che collega etichette e moduli.
 - **Dipendenze**: il campo `richiede` di un modulo elenca i moduli che servono prima; il campo `conflitti` quelli incompatibili.
@@ -128,7 +128,7 @@ Per i secret: Claude **non li vede, non li chiede in chat e non li scrive nei fi
 
 ## 9. Scrivere o modificare un modulo
 
-1. Crea `moduli/<id>/` con `modulo.md` e, se serve, `riferimenti/` (file di esempio nel percorso che avrebbero nel progetto).
+1. Crea `<area>/<id>/` (area: `skill`, `regole`, `template` o `scaffold`) con `modulo.md` e, se serve, `riferimenti/` (file di esempio nel percorso che avrebbero nel progetto).
 2. Nella testata YAML di `modulo.md`:
 
    ```yaml

@@ -10,7 +10,7 @@ Workflow manuale che compila l'AAB e lo carica sul canale di produzione di Play.
 | Azioni esterne | true |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/ci-play-production](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/ci-play-production)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/ci-play-production](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/ci-play-production)
 
 ## Riferimenti
 | Riferimento (nel modulo) | Destinazione (nel progetto) |

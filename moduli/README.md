@@ -12,7 +12,7 @@ I moduli nascono da progetti reali, ripuliti dal contesto specifico: React Nativ
 
 - **Si legge, non si clona.** Claude non clona questo repository e non lo aggiunge ai progetti (né come dipendenza, né come sottomodulo). Legge dall'indirizzo pubblico solo i file che servono:
   `https://raw.githubusercontent.com/MarcoDiGioia/claude-projects-starter/main/<percorso>`
-- **I riferimenti sono materiale di lavoro.** I file in `moduli/<id>/riferimenti/` mostrano come Claude fa quella cosa. Se calzano esattamente alle necessità del progetto, Claude può scriverli tali e quali; altrimenti li adatta o ne prende solo le parti utili. Il progetto di destinazione contiene solo ciò che Claude scrive per lui, non una copia del repository.
+- **I riferimenti sono materiale di lavoro.** I file in `<area>/<id>/riferimenti/` mostrano come Claude fa quella cosa. Se calzano esattamente alle necessità del progetto, Claude può scriverli tali e quali; altrimenti li adatta o ne prende solo le parti utili. Il progetto di destinazione contiene solo ciò che Claude scrive per lui, non una copia del repository.
 - **Niente legami col repository.** Nel progetto non restano percorsi, dipendenze o rimandi a questo repository, a parte il registro `.moduli.json`.
 
 ## Procedura (la segue Claude per ogni nuovo progetto)

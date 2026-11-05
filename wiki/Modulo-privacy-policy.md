@@ -9,7 +9,7 @@ Pagina privacy dell'app pubblicata con GitHub Pages in un repository pubblico.
 | Azioni esterne | true |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/privacy-policy](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/privacy-policy)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/template/privacy-policy](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/template/privacy-policy)
 
 ## Dove
 Le privacy policy stanno in un repository pubblico con GitHub Pages (es. `<tuo-utente>/<tuo-utente>.github.io`, pubblicato da `main`), in `<app>/privacy/index.html`, raggiungibili su `https://<tuo-utente>.github.io/<app>/privacy/`. L'URL va in Play Console: una volta inserito non spostarlo. Un repository privato col piano gratuito non può pubblicare Pages, per questo serve un repository pubblico dedicato.

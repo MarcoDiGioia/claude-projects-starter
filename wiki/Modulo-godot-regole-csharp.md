@@ -10,7 +10,7 @@ Regole di codice, architettura e test per progetti Godot 4 in C
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/godot-regole-csharp](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/godot-regole-csharp)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/regole/godot-regole-csharp](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/regole/godot-regole-csharp)
 
 Senza percorsi locali né server MCP personali (`.mcp.json` resta fuori dal repository, vedi `godot-core-csharp/.gitignore`).
 

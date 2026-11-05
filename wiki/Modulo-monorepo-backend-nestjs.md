@@ -10,7 +10,7 @@ Backend NestJS 11 + Prisma 6 + Jest nel monorepo, con validazione Zod da shared 
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/monorepo-backend-nestjs](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/monorepo-backend-nestjs)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/monorepo-backend-nestjs](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/monorepo-backend-nestjs)
 
 Le integrazioni specifiche (autenticazione gestita, pagamenti, monitoraggio, notifiche push, PDF, email) non sono incluse: si aggiungono caso per caso.
 

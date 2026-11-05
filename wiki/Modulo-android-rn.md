@@ -10,7 +10,7 @@ Scheletro React Native 0.85 (babel con ENV inline, metro, tsconfig con alias, sc
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/android-rn](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/android-rn)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/android-rn](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/android-rn)
 
 ## Riferimenti
 | Riferimento (nel modulo) | Destinazione (nel progetto) |

@@ -10,7 +10,7 @@ Testi della scheda Play in 7 lingue e workflow manuale che li carica (con immagi
 | Azioni esterne | true |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/play-store-scheda](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/play-store-scheda)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/template/play-store-scheda](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/template/play-store-scheda)
 
 ## Riferimenti
 | Riferimento (nel modulo) | Destinazione (nel progetto) |

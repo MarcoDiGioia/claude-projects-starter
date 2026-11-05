@@ -34,17 +34,21 @@ Per un progetto esistente: *"Applica a questo repository le regole base e il wor
 ```
 claude-projects-starter/
 ├── README.md
-├── docs/
-│   ├── manuale.md            # manuale d'uso: progetti nuovi e già avviati
-│   └── proposta-moduli.md    # idea e scelte di progetto
-└── moduli/
-    ├── README.md             # la procedura che Claude segue
-    ├── CATALOGO.md           # elenco dei moduli
-    ├── SELEZIONE.md          # tabella etichetta → moduli
-    └── <id>/
+├── PROGETTO.md               # AREA 1: blocco per le istruzioni di un progetto Claude (senza repo)
+├── docs/                     # manuale e idea di progetto
+├── moduli/                   # AREA 2: procedura e indici della libreria per i repository
+│   ├── README.md             # la procedura che Claude segue
+│   ├── CATALOGO.md           # elenco dei moduli
+│   └── SELEZIONE.md          # tabella etichetta → moduli
+├── skill/<id>/               # procedure e skill da leggere quando servono
+├── regole/<id>/              # regole di lavoro e tecniche
+├── template/<id>/            # file e checklist di partenza riusabili
+└── scaffold/<id>/            # struttura completa di un repo (app, CI, monorepo, Godot)
         ├── modulo.md         # scheda: cosa fa, quando usarlo, passi manuali, verifica
-        └── riferimenti/     # file di riferimento, nel percorso che avrebbero nel progetto
+        └── riferimenti/      # file di riferimento, nel percorso che avrebbero nel progetto
 ```
+
+Ogni modulo sta in una sola area: `skill/` (risparmio-token), `regole/` (regole-base, godot-regole-csharp), `template/` (privacy-policy, checklist e testi per gli store, firma-android), `scaffold/` (tutto il resto). Il catalogo li elenca tutti con il loro percorso.
 
 ## Moduli disponibili
 
@@ -68,7 +72,7 @@ Dettagli e dipendenze in [`moduli/CATALOGO.md`](moduli/CATALOGO.md).
 
 - **Meno spreco di token, mai meno qualità.** Niente letture ripetute, output senza rumore, ricerche delegate, contesto compattato con criterio: regole, skill e subagente nel modulo `risparmio-token`, consigliato da `regole-base`. Nel conflitto vince sempre la qualità.
 
-Sono i valori predefiniti di [`moduli/regole-base`](moduli/regole-base/modulo.md): adattali al tuo modo di lavorare.
+Sono i valori predefiniti di [`regole/regole-base`](regole/regole-base/modulo.md): adattali al tuo modo di lavorare.
 
 ## Documentazione
 

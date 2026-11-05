@@ -10,7 +10,7 @@ Traduzioni it/en/es/fr/de/pt con t('chiave'), lista('chiave') e test di complete
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/i18n-6-lingue](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/i18n-6-lingue)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/i18n-6-lingue](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/i18n-6-lingue)
 
 ## Riferimenti
 | Riferimento (nel modulo) | Destinazione (nel progetto) |

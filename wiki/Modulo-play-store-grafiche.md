@@ -10,7 +10,7 @@ Cartelle e nomi file per icona, feature graphic e screenshot, che il workflow de
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/play-store-grafiche](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/play-store-grafiche)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/template/play-store-grafiche](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/template/play-store-grafiche)
 
 ## Cartelle e file attesi dallo script `update_store_listing.py`
 | Percorso | Contenuto |

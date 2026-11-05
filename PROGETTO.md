@@ -1,6 +1,6 @@
 # Blocco per le istruzioni di progetto Claude
 
-Questa è l'area "inizializzazione del progetto Claude": **non dipende da codice né da repository**. I moduli, i template e le regole tecniche per i repository (cartella `moduli/`) sono un'area separata, che si usa solo quando si lavora su un repository concreto.
+Questa è l'area "inizializzazione del progetto Claude": **non dipende da codice né da repository**. I moduli, i template e le regole tecniche per i repository (cartelle `skill/`, `regole/`, `template/`, `scaffold/`; procedura e catalogo in `moduli/`) sono un'area separata, che si usa solo quando si lavora su un repository concreto.
 
 Questo file contiene il testo da incollare nelle **istruzioni di progetto** di un progetto Claude. Resta corto di proposito: le istruzioni di progetto occupano contesto a ogni turno. Il dettaglio sta in questo repository pubblico e Claude lo legge solo quando serve, senza installare né copiare nulla.
 
@@ -25,11 +25,11 @@ Regole sempre valide:
 5. Risparmiare token solo eliminando lo spreco, mai riducendo la qualità.
 
 Quando leggere cosa:
-- Sessione lunga, esplorazione ampia del codice, consumi: moduli/risparmio-token/riferimenti/.claude/skills/risparmio-token/SKILL.md
-- Ricerche ampie in sola lettura: seguire moduli/risparmio-token/riferimenti/.claude/agents/esploratore.md come procedura
-- Regole di lavoro complete: moduli/regole-base/riferimenti/CLAUDE.base.md
-- Nuovo repository o scaffold (app, CI, store, monorepo, Godot): moduli/README.md, moduli/SELEZIONE.md e le schede in moduli/<id>/modulo.md; presentare il piano e attendere l'ok prima di scrivere
-- Nuova privacy policy per un'app: moduli/privacy-policy/modulo.md
+- Sessione lunga, esplorazione ampia del codice, consumi: skill/risparmio-token/riferimenti/.claude/skills/risparmio-token/SKILL.md
+- Ricerche ampie in sola lettura: seguire skill/risparmio-token/riferimenti/.claude/agents/esploratore.md come procedura
+- Regole di lavoro complete: regole/regole-base/riferimenti/CLAUDE.base.md
+- Nuovo repository o scaffold (app, CI, store, monorepo, Godot): moduli/README.md, moduli/SELEZIONE.md e le schede in scaffold/<id>/modulo.md; presentare il piano e attendere l'ok prima di scrivere
+- Nuova privacy policy per un'app: template/privacy-policy/modulo.md
 
 La memoria del progetto contiene solo i fatti specifici dell'utente (repository, app, convenzioni), non copie dei riferimenti.
 ```

@@ -11,7 +11,7 @@ Frontend Expo (web-first, Expo Router) nel monorepo, con Metro configurato per l
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/monorepo-frontend-expo](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/monorepo-frontend-expo)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/monorepo-frontend-expo](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/monorepo-frontend-expo)
 
 Non inclusi: SVG transformer, NativeWind, il design system e i componenti specifici di un progetto.
 

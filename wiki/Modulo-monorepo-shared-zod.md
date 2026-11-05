@@ -10,7 +10,7 @@ Pacchetto condiviso di schemi Zod, tipi inferiti ed enum, compilato in CommonJS 
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/monorepo-shared-zod](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/monorepo-shared-zod)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/monorepo-shared-zod](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/monorepo-shared-zod)
 
 Senza schemi di dominio.
 
