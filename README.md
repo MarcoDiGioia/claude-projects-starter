@@ -69,7 +69,7 @@ Sono i valori predefiniti di [`moduli/regole-base`](moduli/regole-base/modulo.md
 
 ## Documentazione di consultazione
 
-La cartella [`wiki/`](wiki/README.md) raccoglie la documentazione di consultazione: manuale, procedura, catalogo e una pagina per modulo. È generata da `moduli/` e `docs/` con `scripts/genera-wiki.sh wiki --markdown`; la fonte di verità resta `moduli/` e `docs/`. Lo stesso script, senza `--markdown`, produce le pagine per una wiki GitHub.
+La cartella [`wiki/`](wiki/README.md) raccoglie la documentazione di consultazione: manuale, procedura, catalogo e una pagina per modulo. È generata da `moduli/` e `docs/` con `scripts/genera-wiki.sh wiki --markdown`; la fonte di verità resta `moduli/` e `docs/`. Lo stesso script, senza `--markdown`, produce le pagine per la wiki GitHub, che si pubblicano con il workflow manuale *Pubblica wiki* (scheda Actions).
 
 ## Licenza
 
