@@ -1,0 +1,37 @@
+# play-store-scheda
+
+Testi della scheda Play in 7 lingue e workflow manuale che li carica (con immagini e screenshot) via API.
+
+| | |
+|---|---|
+| Quando usarlo | App su Play, quando i testi sono pronti. |
+| Quando no | Prima di avere i testi; app non su Play. |
+| Richiede | ci-play-internal |
+| Azioni esterne | true |
+| Versione | 1 |
+
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/play-store-scheda](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/play-store-scheda)
+
+## Riferimenti
+| Riferimento (nel modulo) | Destinazione (nel progetto) |
+|---|---|
+| `riferimenti/store/listings/<lingua>/{title,short_description,full_description}.txt` (it-IT, en-US, en-GB, es-ES, fr-FR, de-DE, pt-PT) | `store/listings/` |
+| `riferimenti/.github/workflows/update-store-listing.yml` | `.github/workflows/update-store-listing.yml` |
+| `riferimenti/.github/scripts/update_store_listing.py` | `.github/scripts/update_store_listing.py` |
+
+## Segnaposto
+`APP_DISPLAY_NAME` (titolo), `APP_PACKAGE_ID` (workflow).
+
+## Note
+- Limiti: titolo 30, descrizione breve 80, descrizione completa 4000 caratteri.
+- I file contengono `TODO:` finché i testi non sono scritti: lo script si rifiuta di caricare testi con `TODO:` o `APP_DISPLAY_NAME`.
+- Il workflow ha una scelta: `testi e immagini` / `solo immagini` / `solo testi`. Solo `workflow_dispatch`; deve essere sul branch predefinito per poterlo lanciare.
+- Immagini: vedi `play-store-grafiche`.
+- Prova locale senza toccare Play: `python .github/scripts/update_store_listing.py <package> --dry-run`.
+- L'account di servizio deve avere il permesso "Gestisci la presenza nello store".
+
+## Passi manuali (a carico dell'utente)
+Lanciare il workflow da GitHub → Actions.
+
+## Verifica
+`--dry-run` dello script senza errori, con i testi compilati.

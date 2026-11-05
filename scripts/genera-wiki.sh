@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 # Genera le pagine della wiki GitHub a partire dai documenti del repository.
-# Uso:  scripts/genera-wiki.sh <cartella-di-destinazione>
+# Uso:  scripts/genera-wiki.sh <cartella-di-destinazione> [--markdown]
+#   senza opzione: pagine per la wiki GitHub (link [[Pagina]])
+#   --markdown:    pagine per una cartella del repository (link .md normali, Home.md -> README.md)
 # La fonte di verità resta il repository: la wiki si rigenera, non si modifica a mano.
 set -euo pipefail
 
-OUT="${1:?Uso: $0 <cartella-di-destinazione>}"
+OUT="${1:?Uso: $0 <cartella-di-destinazione> [--markdown]}"
+MODE="${2:-}"
 REPO="https://github.com/MarcoDiGioia/claude-projects-starter"
 BLOB="$REPO/blob/main"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -98,5 +101,26 @@ cat > "$OUT/_Sidebar.md" <<SIDE
 - [[Idea e scelte di progetto]]
 - [Repository]($REPO)
 SIDE
+
+if [ "$MODE" = "--markdown" ]; then
+  python3 - "$OUT" <<'PY'
+import re, sys, glob, os
+out = sys.argv[1]
+os.replace(os.path.join(out, "Home.md"), os.path.join(out, "README.md"))
+def wl(m):
+    name = m.group(1)
+    page = "README" if name == "Home" else name.replace(" ", "-")
+    return f"[{name}]({page}.md)"
+for f in glob.glob(os.path.join(out, "*.md")):
+    t = open(f, encoding="utf-8").read()
+    t = re.sub(r"\[\[([^\]]+)\]\]", wl, t)
+    t = re.sub(r"\]\((Modulo-[a-z0-9-]+)\)", r"](\1.md)", t)
+    if os.path.basename(f) == "README.md":
+        t = t.replace("Fonte di verità: [", "Documentazione di consultazione generata da `moduli/` e `docs/`. Fonte di verità: [")
+        t = t.replace(" Questa wiki è generata con `scripts/genera-wiki.sh`: le modifiche si fanno nel repository, non qui.", " Rigenera le pagine con `scripts/genera-wiki.sh wiki --markdown` invece di modificarle a mano.")
+    open(f, "w", encoding="utf-8").write(t)
+PY
+  rm -f "$OUT/_Sidebar.md"
+fi
 
 echo "Wiki generata in $OUT"
