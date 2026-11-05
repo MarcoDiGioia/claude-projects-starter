@@ -31,7 +31,6 @@ PY
 fix_links "$ROOT/docs/manuale.md"   docs   > "$OUT/Manuale.md"
 fix_links "$ROOT/moduli/CATALOGO.md" moduli > "$OUT/Catalogo-moduli.md"
 fix_links "$ROOT/moduli/SELEZIONE.md" moduli > "$OUT/Selezione-dei-moduli.md"
-fix_links "$ROOT/SECURITY.md" .            > "$OUT/Sicurezza.md"
 
 cat > "$OUT/Home.md" <<HOME
 # claude-projects-starter
@@ -41,7 +40,6 @@ Un cestino di **moduli di configurazione riutilizzabili** per i tuoi progetti so
 - [[Manuale]]: come usarlo in progetti nuovi e già avviati
 - [[Catalogo moduli]]: l'elenco dei moduli
 - [[Selezione dei moduli]]: come Claude sceglie i moduli dalla descrizione
-- [[Sicurezza]]: segreti, segnalazioni, principi
 
 Codice e fonte di verità: [$REPO]($REPO). Questa wiki è generata con \`scripts/genera-wiki.sh\`: le modifiche si fanno nel repository, non qui.
 HOME
@@ -53,7 +51,6 @@ cat > "$OUT/_Sidebar.md" <<SIDE
 - [[Manuale]]
 - [[Catalogo moduli]]
 - [[Selezione dei moduli]]
-- [[Sicurezza]]
 - [Repository]($REPO)
 SIDE
 
