@@ -10,7 +10,7 @@ Workflow manuale che compila l'AAB di produzione e lo carica sul canale interno 
 | Azioni esterne | true |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/ci-play-internal](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/ci-play-internal)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/ci-play-internal](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/ci-play-internal)
 
 ## Riferimenti
 | Riferimento (nel modulo) | Destinazione (nel progetto) |

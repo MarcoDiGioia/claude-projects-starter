@@ -8,7 +8,7 @@ CLAUDE.md di partenza con le regole valide per tutti i progetti.
 | Azioni esterne | false |
 | Versione | 2 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/regole-base](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/regole-base)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/regole/regole-base](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/regole/regole-base)
 
 ## Riferimenti
 | Riferimento (nel modulo) | Destinazione (nel progetto) |

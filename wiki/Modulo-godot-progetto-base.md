@@ -10,7 +10,7 @@ project.godot di partenza (C
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/godot-progetto-base](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/godot-progetto-base)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/godot-progetto-base](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/godot-progetto-base)
 
 ## Riferimenti
 | Riferimento (nel modulo) | Destinazione (nel progetto) |

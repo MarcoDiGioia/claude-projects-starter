@@ -11,7 +11,7 @@ Fondamenta C
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/godot-core-csharp](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/godot-core-csharp)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/godot-core-csharp](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/godot-core-csharp)
 
 Solo infrastruttura, senza codice di dominio.
 

@@ -10,7 +10,7 @@ Workflow manuale che costruisce un APK di debug scaricabile dagli artifact, con 
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/godot-ci-android-apk-prova](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/godot-ci-android-apk-prova)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/godot-ci-android-apk-prova](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/godot-ci-android-apk-prova)
 
 **Scelte**: trigger solo manuale (`workflow_dispatch`), niente build a ogni push; la chiave di debug standard viene creata nel runner, così nel repo non entra nessun keystore.
 

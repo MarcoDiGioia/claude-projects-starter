@@ -48,7 +48,7 @@ jobs:
           missing=0
           for name in KEYSTORE_B64 KEYSTORE_ALIAS KEYSTORE_PASSWORD; do
             if [ -z "${!name}" ]; then
-              echo "::error::Manca il secret per $name (vedi moduli/godot-ci-android-aab-play/modulo.md)"
+              echo "::error::Manca il secret per $name (vedi scaffold/godot-ci-android-aab-play/modulo.md)"
               missing=1
             fi
           done

@@ -11,7 +11,7 @@ Workflow manuale che esporta l'AAB firmato con la chiave di upload e lo carica s
 | Azioni esterne | true |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/godot-ci-android-aab-play](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/godot-ci-android-aab-play)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/godot-ci-android-aab-play](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/godot-ci-android-aab-play)
 
 **Scelta**: trigger solo `workflow_dispatch` (regola: workflow CI solo manuali), niente caricamento a ogni push.
 

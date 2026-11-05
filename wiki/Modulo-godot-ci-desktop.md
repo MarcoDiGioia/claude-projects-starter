@@ -10,7 +10,7 @@ Workflow manuale che esporta il gioco per Windows e Linux come pacchetti scarica
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/godot-ci-desktop](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/godot-ci-desktop)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/godot-ci-desktop](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/godot-ci-desktop)
 
 **Scelta**: trigger solo `workflow_dispatch`, niente build a ogni push.
 

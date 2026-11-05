@@ -9,7 +9,7 @@ Elenco dei secret del repo necessari per firmare e caricare l'app Android.
 | Azioni esterne | true |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/firma-android](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/firma-android)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/template/firma-android](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/template/firma-android)
 
 ## Secret richiesti nel repo dell'app (GitHub → Settings → Secrets and variables → Actions)
 - `KEYSTORE_BASE64`

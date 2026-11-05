@@ -37,15 +37,16 @@ fix_links "$ROOT/moduli/README.md"     moduli > "$OUT/Procedura-di-Claude.md"
 fix_links "$ROOT/moduli/SELEZIONE.md"  moduli > "$OUT/Selezione-dei-moduli.md"
 # Il catalogo rimanda alle pagine dei moduli della wiki
 fix_links "$ROOT/moduli/CATALOGO.md"   moduli \
-  | sed -E "s#\]\($BLOB/moduli/([a-z0-9-]+)/modulo.md\)#](Modulo-\1)#g" > "$OUT/Catalogo-moduli.md"
+  | sed -E "s#\]\($BLOB/(skill|regole|template|scaffold)/([a-z0-9-]+)/modulo.md\)#](Modulo-\2)#g" > "$OUT/Catalogo-moduli.md"
 
 # Una pagina per modulo: titolo, dati della testata e corpo della scheda
-for dir in "$ROOT"/moduli/*/; do
+for dir in "$ROOT"/skill/*/ "$ROOT"/regole/*/ "$ROOT"/template/*/ "$ROOT"/scaffold/*/; do
   id="$(basename "$dir")"
+  area="$(basename "$(dirname "$dir")")"
   [ -f "$dir/modulo.md" ] || continue
-  python3 - "$dir/modulo.md" "$id" "$BLOB" > "$OUT/Modulo-$id.md" <<'PY'
+  python3 - "$dir/modulo.md" "$id" "$BLOB" "$area" > "$OUT/Modulo-$id.md" <<'PY'
 import re, sys, posixpath
-src, mid, blob = sys.argv[1:4]
+src, mid, blob, area = sys.argv[1:5]
 text = open(src, encoding="utf-8").read()
 m = re.match(r"^---\n(.*?)\n---\n(.*)$", text, re.S)
 head, body = (m.group(1), m.group(2)) if m else ("", text)
@@ -58,7 +59,7 @@ def link(m):
     if re.match(r"^(https?:|#|mailto:)", url):
         return m.group(0)
     path, _, frag = url.partition("#")
-    full = posixpath.normpath(posixpath.join("moduli", mid, path))
+    full = posixpath.normpath(posixpath.join(area, mid, path))
     return f"[{label}]({blob}/{full}" + (f"#{frag}" if frag else "") + ")"
 body = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link, body)
 out = [f"# {mid}", ""]
@@ -71,7 +72,7 @@ out += ["| | |", "|---|---|"]
 for label, key in rows:
     if meta.get(key) and meta[key] not in ("mai",):
         out.append(f"| {label} | {meta[key]} |")
-out += ["", f"Riferimenti del modulo: [{blob.rsplit('/blob',1)[0]}/tree/main/moduli/{mid}]({blob.rsplit('/blob',1)[0]}/tree/main/moduli/{mid})", ""]
+out += ["", f"Riferimenti del modulo: [{blob.rsplit('/blob',1)[0]}/tree/main/{area}/{mid}]({blob.rsplit('/blob',1)[0]}/tree/main/{area}/{mid})", ""]
 print("\n".join(out) + "\n" + body.lstrip("\n"), end="")
 PY
 done

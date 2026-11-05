@@ -11,7 +11,7 @@ Radice di un monorepo npm workspaces (shared + backend + frontend) con script co
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/monorepo-npm-workspaces](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/monorepo-npm-workspaces)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/monorepo-npm-workspaces](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/monorepo-npm-workspaces)
 
 Senza codice di dominio.
 

@@ -2,9 +2,18 @@
 
 Un **cestino di moduli per Claude**, pensato per lavorare con [Claude Code](https://claude.ai/code). I moduli sono indicazioni e riferimenti che Claude legge quando servono, come skill che si carica da sé al bisogno: regole di lavoro, scheletri di codice, workflow di CI, procedure di pubblicazione. Descrivi il progetto, Claude sceglie i moduli giusti, ti mostra il piano e, dopo il tuo ok, ne applica quanto serve.
 
-Funziona sia per **progetti nuovi** sia per **progetti già avviati**. Il repository **non si clona e non entra nei tuoi progetti**: Claude legge dall'indirizzo pubblico solo i file che gli servono e scrive nel progetto soltanto ciò che serve, tale e quale se calza, altrimenti adattato.
+## Due aree, indipendenti
 
-## Come funziona in breve
+Il repository ha due aree distinte. La prima non dipende dalla seconda.
+
+1. **Inizializzazione di un progetto Claude** ([`PROGETTO.md`](PROGETTO.md)). Estende istruzioni, memoria e contesto di un progetto Claude con riferimenti letti da qui. È **indipendente da codice e repository**: vale per qualsiasi progetto, anche senza un repo, e non richiede di scrivere nulla in nessun repository.
+2. **Libreria di moduli, template e regole tecniche** (cartella [`moduli/`](moduli/README.md)). Scaffold, workflow di CI, regole di codice, template e procedure che Claude può leggere, adattare e includere in un repository quando serve. Qui si possono aggiungere nuovi moduli, template e regole tecniche, senza limiti. Usarla è sempre una scelta esplicita per un repository concreto: piano, ok, PR.
+
+Regola per chi modifica il repository: ciò che appartiene alla prima area non deve mai richiedere un repository o del codice, e ciò che appartiene alla seconda non va mai messo nel blocco di `PROGETTO.md`, se non come riga dell'indice "quando leggere cosa".
+
+Il repository **non si clona**: Claude legge dall'indirizzo pubblico solo i file che gli servono.
+
+## Come funziona in breve (moduli di scaffold per i repository)
 
 1. **Scrivi "usa claude-projects-starter"** nella richiesta. Il repository è pubblico: non serve dargli accesso.
 2. **Descrivi il progetto** in poche righe: che cosa fa, per quale piattaforma, se ha pubblicità, se va su uno store, in quali lingue.
@@ -25,17 +34,21 @@ Per un progetto esistente: *"Applica a questo repository le regole base e il wor
 ```
 claude-projects-starter/
 ├── README.md
-├── docs/
-│   ├── manuale.md            # manuale d'uso: progetti nuovi e già avviati
-│   └── proposta-moduli.md    # idea e scelte di progetto
-└── moduli/
-    ├── README.md             # la procedura che Claude segue
-    ├── CATALOGO.md           # elenco dei moduli
-    ├── SELEZIONE.md          # tabella etichetta → moduli
-    └── <id>/
+├── PROGETTO.md               # AREA 1: blocco per le istruzioni di un progetto Claude (senza repo)
+├── docs/                     # manuale e idea di progetto
+├── moduli/                   # AREA 2: procedura e indici della libreria per i repository
+│   ├── README.md             # la procedura che Claude segue
+│   ├── CATALOGO.md           # elenco dei moduli
+│   └── SELEZIONE.md          # tabella etichetta → moduli
+├── skill/<id>/               # procedure e skill da leggere quando servono
+├── regole/<id>/              # regole di lavoro e tecniche
+├── template/<id>/            # file e checklist di partenza riusabili
+└── scaffold/<id>/            # struttura completa di un repo (app, CI, monorepo, Godot)
         ├── modulo.md         # scheda: cosa fa, quando usarlo, passi manuali, verifica
-        └── riferimenti/     # file di riferimento, nel percorso che avrebbero nel progetto
+        └── riferimenti/      # file di riferimento, nel percorso che avrebbero nel progetto
 ```
+
+Ogni modulo sta in una sola area: `skill/` (risparmio-token), `regole/` (regole-base, godot-regole-csharp), `template/` (privacy-policy, checklist e testi per gli store, firma-android), `scaffold/` (tutto il resto). Il catalogo li elenca tutti con il loro percorso.
 
 ## Moduli disponibili
 
@@ -59,7 +72,7 @@ Dettagli e dipendenze in [`moduli/CATALOGO.md`](moduli/CATALOGO.md).
 
 - **Meno spreco di token, mai meno qualità.** Niente letture ripetute, output senza rumore, ricerche delegate, contesto compattato con criterio: regole, skill e subagente nel modulo `risparmio-token`, consigliato da `regole-base`. Nel conflitto vince sempre la qualità.
 
-Sono i valori predefiniti di [`moduli/regole-base`](moduli/regole-base/modulo.md): adattali al tuo modo di lavorare.
+Sono i valori predefiniti di [`regole/regole-base`](regole/regole-base/modulo.md): adattali al tuo modo di lavorare.
 
 ## Documentazione
 

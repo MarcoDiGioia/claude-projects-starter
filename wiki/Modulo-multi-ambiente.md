@@ -10,7 +10,7 @@ Configurazione dev/test/prod iniettata da Babel (ENV) con constants.ts e ENVIRON
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/multi-ambiente](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/multi-ambiente)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/multi-ambiente](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/scaffold/multi-ambiente)
 
 ## Riferimenti
 | Riferimento (nel modulo) | Destinazione (nel progetto) |

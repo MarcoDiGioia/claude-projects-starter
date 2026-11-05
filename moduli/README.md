@@ -4,11 +4,15 @@ Cestino di moduli per Claude. Un modulo **non è codice da inserire in altri sof
 
 I moduli nascono da progetti reali, ripuliti dal contesto specifico: React Native per Android (`android-rn`, `ads-admob`, `ci-play-*`...), monorepo npm workspaces (`monorepo-*`) e Godot 4 in C# (`godot-*`).
 
+> **Area separata.** Questa cartella è la libreria per i repository (template, moduli, regole tecniche, scaffold) e non fa parte dell'inizializzazione del progetto Claude, che è indipendente da codice e repository.
+>
+> **Due usi.** (1) Estendere un progetto Claude: le regole e le skill (`regole-base`, `risparmio-token`, `privacy-policy`) si leggono da qui quando servono, tramite il blocco in [`../PROGETTO.md`](../PROGETTO.md); non si installano nei repository. (2) Scaffold di un repository: la procedura sotto, solo quando l'utente crea o modifica un repo.
+
 ## Come Claude li usa
 
 - **Si legge, non si clona.** Claude non clona questo repository e non lo aggiunge ai progetti (né come dipendenza, né come sottomodulo). Legge dall'indirizzo pubblico solo i file che servono:
   `https://raw.githubusercontent.com/MarcoDiGioia/claude-projects-starter/main/<percorso>`
-- **I riferimenti sono materiale di lavoro.** I file in `moduli/<id>/riferimenti/` mostrano come Claude fa quella cosa. Se calzano esattamente alle necessità del progetto, Claude può scriverli tali e quali; altrimenti li adatta o ne prende solo le parti utili. Il progetto di destinazione contiene solo ciò che Claude scrive per lui, non una copia del repository.
+- **I riferimenti sono materiale di lavoro.** I file in `<area>/<id>/riferimenti/` mostrano come Claude fa quella cosa. Se calzano esattamente alle necessità del progetto, Claude può scriverli tali e quali; altrimenti li adatta o ne prende solo le parti utili. Il progetto di destinazione contiene solo ciò che Claude scrive per lui, non una copia del repository.
 - **Niente legami col repository.** Nel progetto non restano percorsi, dipendenze o rimandi a questo repository, a parte il registro `.moduli.json`.
 
 ## Procedura (la segue Claude per ogni nuovo progetto)

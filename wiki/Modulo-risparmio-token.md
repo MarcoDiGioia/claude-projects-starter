@@ -10,7 +10,7 @@ Regole, skill e subagente per ridurre lo spreco di token senza perdere qualità.
 | Azioni esterne | false |
 | Versione | 1 |
 
-Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/risparmio-token](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/moduli/risparmio-token)
+Riferimenti del modulo: [https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/skill/risparmio-token](https://github.com/MarcoDiGioia/claude-projects-starter/tree/main/skill/risparmio-token)
 
 ## Regola salda
 **Il modulo non deve mai ridurre le prestazioni di Claude.** Nel conflitto tra risparmio e qualità vince la qualità. Per questo il modulo taglia solo lo spreco e non tocca modello, sforzo di ragionamento, verifiche, limiti di lettura o dimensione degli output. Ogni nuova regola va controllata con questa domanda: "può far perdere informazione o precisione?". Se sì, non entra.
