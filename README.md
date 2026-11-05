@@ -67,6 +67,11 @@ Sono i valori predefiniti di [`moduli/regole-base`](moduli/regole-base/modulo.md
 - [Proposta](docs/proposta-moduli.md): perché è fatto così.
 - [Procedura di Claude](moduli/README.md) e [catalogo](moduli/CATALOGO.md).
 
+## Sicurezza e wiki
+
+- [`SECURITY.md`](SECURITY.md): come segnalare un problema e i principi sui segreti. Il `.gitignore` della radice blocca chiavi, keystore e `.env`.
+- La wiki si genera dai documenti del repository con `scripts/genera-wiki.sh <cartella>`; la fonte di verità resta il repository.
+
 ## Stato
 
 I moduli per React Native e Android derivano da progetti reali. I moduli monorepo e Godot sono bozze mai provate su un progetto nuovo.

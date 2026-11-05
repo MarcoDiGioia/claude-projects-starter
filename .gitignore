@@ -1,0 +1,20 @@
+# Segreti e chiavi: non devono mai finire nel repository
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+service-account*.json
+google-play*.json
+credentials*.json
+*.secret
+
+# Server MCP personali e impostazioni locali
+.mcp.json
+.claude/settings.local.json
+
+# Sistema
+.DS_Store
