@@ -1,9 +1,9 @@
 ---
 id: risparmio-token
 versione: 1
-descrizione: Regole, skill, subagente per ridurre lo spreco di token senza perdere qualità.
+descrizione: Regole, skill e subagente per ridurre lo spreco di token senza perdere qualità.
 quando_usarlo: Consigliato per ogni progetto; proporlo sempre nel piano insieme a regole-base.
-quando_no: Se l'utente preferisce non limitare letture e output.
+quando_no: Se l'utente non vuole queste regole di lavoro.
 etichette: [sempre]
 richiede: [regole-base]
 conflitti: []
