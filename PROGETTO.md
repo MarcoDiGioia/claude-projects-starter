@@ -1,5 +1,7 @@
 # Blocco per le istruzioni di progetto Claude
 
+Questa è l'area "inizializzazione del progetto Claude": **non dipende da codice né da repository**. I moduli, i template e le regole tecniche per i repository (cartella `moduli/`) sono un'area separata, che si usa solo quando si lavora su un repository concreto.
+
 Questo file contiene il testo da incollare nelle **istruzioni di progetto** di un progetto Claude. Resta corto di proposito: le istruzioni di progetto occupano contesto a ogni turno. Il dettaglio sta in questo repository pubblico e Claude lo legge solo quando serve, senza installare né copiare nulla.
 
 Base degli indirizzi: `https://raw.githubusercontent.com/MarcoDiGioia/claude-projects-starter/main/`

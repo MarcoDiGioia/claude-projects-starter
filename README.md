@@ -2,11 +2,14 @@
 
 Un **cestino di moduli per Claude**, pensato per lavorare con [Claude Code](https://claude.ai/code). I moduli sono indicazioni e riferimenti che Claude legge quando servono, come skill che si carica da sé al bisogno: regole di lavoro, scheletri di codice, workflow di CI, procedure di pubblicazione. Descrivi il progetto, Claude sceglie i moduli giusti, ti mostra il piano e, dopo il tuo ok, ne applica quanto serve.
 
-## Scopo
+## Due aree, indipendenti
 
-Lo scopo principale è **estendere un progetto Claude** (istruzioni, memoria, contesto) con riferimenti letti da qui, senza installare nulla né copiarlo nei repository. Il blocco da incollare nelle istruzioni di progetto è in [`PROGETTO.md`](PROGETTO.md): poche righe che dicono a Claude quando leggere regole, skill e procedure dal repository pubblico.
+Il repository ha due aree distinte. La prima non dipende dalla seconda.
 
-I moduli di scaffold (app React Native, CI, store, monorepo, Godot) sono una parte a parte: servono solo quando si crea o si modifica un repository. In quel caso Claude scrive nel repo i file necessari, su un branch e con una PR.
+1. **Inizializzazione di un progetto Claude** ([`PROGETTO.md`](PROGETTO.md)). Estende istruzioni, memoria e contesto di un progetto Claude con riferimenti letti da qui. È **indipendente da codice e repository**: vale per qualsiasi progetto, anche senza un repo, e non richiede di scrivere nulla in nessun repository.
+2. **Libreria di moduli, template e regole tecniche** (cartella [`moduli/`](moduli/README.md)). Scaffold, workflow di CI, regole di codice, template e procedure che Claude può leggere, adattare e includere in un repository quando serve. Qui si possono aggiungere nuovi moduli, template e regole tecniche, senza limiti. Usarla è sempre una scelta esplicita per un repository concreto: piano, ok, PR.
+
+Regola per chi modifica il repository: ciò che appartiene alla prima area non deve mai richiedere un repository o del codice, e ciò che appartiene alla seconda non va mai messo nel blocco di `PROGETTO.md`, se non come riga dell'indice "quando leggere cosa".
 
 Il repository **non si clona**: Claude legge dall'indirizzo pubblico solo i file che gli servono.
 
