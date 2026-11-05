@@ -67,6 +67,14 @@ Sono i valori predefiniti di [`moduli/regole-base`](moduli/regole-base/modulo.md
 - [Proposta](docs/proposta-moduli.md): perché è fatto così.
 - [Procedura di Claude](moduli/README.md) e [catalogo](moduli/CATALOGO.md).
 
+## Wiki
+
+La wiki si genera dai documenti del repository con `scripts/genera-wiki.sh <cartella>`; la fonte di verità resta il repository.
+
+## Licenza
+
+Distribuito con licenza [GNU GPL v3](LICENSE).
+
 ## Stato
 
 I moduli per React Native e Android derivano da progetti reali. I moduli monorepo e Godot sono bozze mai provate su un progetto nuovo.
